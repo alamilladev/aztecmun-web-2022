@@ -1,0 +1,19 @@
+// Breakpoint variables
+$xs: 360px; // iPhone 5
+$s: 440px; // Google pixel 2
+$m: 768px; // iPads and tablets
+$l: 1280px; // Laptops
+$xl: 1440px; // Desktops
+
+// Mixin to handle breakpoints styles
+@mixin for-size($size) {
+  @if $size == xs {
+    @media (max-width: $s) { @content; }
+  } @else if $size == m {
+    @media (min-width: $m) { @content; }
+  } @else if $size == l {
+    @media (min-width: $l) { @content; }
+  } @else if $size == xl {
+    @media (min-width: $xl) { @content; }
+  }
+}

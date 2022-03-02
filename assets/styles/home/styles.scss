@@ -1,0 +1,25 @@
+.hero {
+  min-height: 442px;
+  background-color: $color-tertiary-variant;
+  
+  .grid {
+    grid-template-columns: 2fr 3fr;
+    place-items: center;
+  }
+  
+  .hero-info {
+    p {
+      margin: 32px 0 39px;
+    }
+    .buttons-wrapper {
+      display: flex;
+      a:first-child {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  .hero-image {
+    max-width: 547px;
+  }
+}

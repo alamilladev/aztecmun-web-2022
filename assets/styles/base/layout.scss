@@ -1,0 +1,45 @@
+// Columns config
+:root {
+  --columns: 4;
+  --column-gap: 6,67%;
+
+  @include for-size(m) {
+    --columns: 12;
+    --column-gap: 2.27%
+  }
+
+  @include for-size(l) {
+    --column-gap: 2.19%;
+  }
+}
+
+// Grid config
+.container {
+  margin: 0 16px;
+  min-height: inherit;
+
+  @include for-size(m) {
+    margin: 0 32px;
+  }
+
+  @include for-size(l) {
+    margin: 0 80px;
+  }
+
+  @include for-size(xl) {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+// Grid and subgrod config
+.grid, .subgrid {
+  display: grid;
+  // grid-column-gap: var(--column-gap);
+  // grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

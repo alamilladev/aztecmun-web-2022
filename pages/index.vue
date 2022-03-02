@@ -1,38 +1,43 @@
 <template>
-  <div class="container">
-    <img class="mobile-img" src="~/assets/images/coming-soon-mobile.png" alt="AztecMUN 2022. Coming soon...">
-    <img class="desktop-img" src="~/assets/images/coming-soon-deskto.png" alt="AztecMUN 2022. Coming soon...">
+  <div>
+    <section class="hero">
+      <div class="container grid">
+        <div class="hero-info">
+          <h1>
+            Modelo de naciones unidas<br>
+            <strong>AztecMUN edicion 2022</strong>
+          </h1>
+          <p>Desarrolla tus habilidades comunicativas y pensamiento crítico-analítico a través del debate.</p>
+          <div class="buttons-wrapper">
+            <ButtonsLinkBtn
+              type="fill"
+              color="primary"
+              size="medium"
+              link-url="/"
+              label="Registrate"
+            />
+            <ButtonsLinkBtn 
+              type="outline"
+              color="secondary"
+              size="medium"
+              link-url="/"
+              label="Conócenos"
+            />
+          </div>
+        </div>
+        <img class="hero-image" src="~/assets/images/home/hero.jpg" alt="Miembros del comité organizador de aztecmun">
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  layout: 'default'
 }
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    position: relative;
-    height: 100vh;
-    background-color: #163768;
-    img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      &.mobile-img {
-        @include cell768p() {
-          display: none;
-        }
-      }
-      &.desktop-img {
-        display: none;
-        @include cell768p() {
-          display: inline-block;
-        }
-      }
-    }
-  }
+  @import '@/assets/styles/home/styles.scss';
 </style>

@@ -15,5 +15,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "no-trailing-spaces": 0,
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "selfClosing": 0
+  }
 }
