@@ -17,6 +17,7 @@
 .container {
   margin: 0 16px;
   min-height: inherit;
+  height: inherit;
 
   @include for-size(m) {
     margin: 0 32px;

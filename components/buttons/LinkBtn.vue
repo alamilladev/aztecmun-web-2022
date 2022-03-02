@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="linkUrl" :class="[className, type, color, size]">
+  <nuxt-link :to="linkUrl" :class="['btn-link', className, type, color, size]">
     {{ label }}
   </nuxt-link>
 </template>
@@ -10,7 +10,7 @@ export default {
   props: {
     className: {
       type: String,
-      default: 'btn-link'
+      default: ''
     },
     type: {
       type: String,

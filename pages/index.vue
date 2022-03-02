@@ -5,7 +5,7 @@
         <div class="hero-info">
           <h1>
             Modelo de naciones unidas<br>
-            <strong>AztecMUN edicion 2022</strong>
+            <span class="semibold">AztecMUN </span><i>edicion 2022</i>
           </h1>
           <p>Desarrolla tus habilidades comunicativas y pensamiento crítico-analítico a través del debate.</p>
           <div class="buttons-wrapper">
