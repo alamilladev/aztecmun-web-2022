@@ -6,7 +6,7 @@
     grid-template-columns: 2fr 3fr;
     place-items: center;
   }
-  
+
   .hero-info {
     p {
       margin: 32px 0 39px;
@@ -21,5 +21,77 @@
 
   .hero-image {
     max-width: 547px;
+  }
+}
+
+.invitation {
+  min-height: 538px;
+  
+  .invitation-title {
+    text-align: center;
+  }
+
+  .invitation-cards-wrapper {
+    &.grid {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+  }
+}
+
+.agenda {
+  min-height: 538px;
+  background-color: $color-gray-variant;
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agenda-map {
+    max-width: 450px;
+    max-height: 390px;
+    border: 0;
+    place-self: center;
+  }
+  .agenda-info {
+    max-width: 460px;
+    align-self: center;
+    .agenda-details-wrapper {
+      margin: 66px 0 47px;
+
+      &.subgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        .agenda-detail-item {
+          display: flex;
+          &:nth-child(2) {
+            justify-self: end;
+          }
+          &:last-child {
+            grid-column: 1 / 3;
+            margin-top: 40px;
+          }
+          img {
+            margin-right: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sponsors {
+  min-height: 260px;
+
+  .section-subtitle {
+    text-align: center;
+  }
+
+  .grid {
+    min-height: initial;
+    grid-template-columns: repeat(4, minmax(100px, auto));
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: 60px;
   }
 }

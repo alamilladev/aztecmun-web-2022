@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container grid">
-      <img class="logo" src="~/assets/images/home/logo.png" alt="Logo de AztecMUN edición 2022">
+      <img class="logo" src="~/assets/images/logo.png" alt="Logo de AztecMUN edición 2022">
       <nav>
         <nuxt-link class="nav-link" to="/">Nosotros</nuxt-link>
         <nuxt-link class="nav-link" to="/">Recursos</nuxt-link>

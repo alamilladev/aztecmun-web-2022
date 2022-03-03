@@ -45,6 +45,7 @@ export default {
 
     &.primary {
       font-weight: 700;
+      border: 1px solid $color-primary;
       background-color: $color-primary;
       color: $color-white;
     }
@@ -52,6 +53,11 @@ export default {
       font-weight: 600;
       border: 1px solid $color-secondary;
       color: $color-secondary;
+    }
+    &.quaternary {
+      font-weight: 600;
+      border: 1px solid $color-quaternary;
+      color: $color-quaternary;
     }
     &.small { width: 140px; }
     &.medium { width: 180px; }

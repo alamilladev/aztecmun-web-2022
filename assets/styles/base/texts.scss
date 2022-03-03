@@ -20,6 +20,10 @@ h2 {
   @include for-size(m) {
     font-size: $font-size-large;
   }
+
+  &.section-subtitle {
+    margin: 64px 0 62px;
+  }
 }
 
 p {
