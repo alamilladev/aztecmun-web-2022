@@ -5,25 +5,31 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  font-size: $font-size-large;
+  font-size: $font-size-x-large;
   font-weight: 400;
 
   @include for-size(m) {
-    font-size: $font-size-extra-large;
+    font-size: $font-size-xx-large;
   }
 }
 
 h2 {
-  font-size: $font-size-medium;
+  font-size: $font-size-large;
   font-weight: 600;
 
   @include for-size(m) {
-    font-size: $font-size-large;
+    font-size: $font-size-x-large;
   }
 
   &.section-subtitle {
-    margin: 64px 0 62px;
+    max-width: 465px;
+    margin: 64px auto 62px;
   }
+}
+
+h3 {
+  font-size: $font-size-medium;
+  font-weight: 600;
 }
 
 p {
@@ -40,3 +46,5 @@ a {
 .meidum { font-weight: 500; }
 .semibold { font-weight: 600; }
 .bold { font-weight: 700; }
+
+.text-center { text-align: center; }

@@ -26,20 +26,15 @@
 
 .invitation {
   min-height: 538px;
-  
-  .invitation-title {
-    text-align: center;
-  }
-
   .invitation-cards-wrapper {
     &.grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(var(--max-3-columns), 1fr);
       justify-items: center;
     }
   }
 }
 
-.agenda {
+.location {
   min-height: 538px;
   background-color: $color-gray-variant;
 
@@ -47,22 +42,22 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .agenda-map {
+  .location-map {
     max-width: 450px;
     max-height: 390px;
     border: 0;
     place-self: center;
   }
-  .agenda-info {
+  .location-info {
     max-width: 460px;
     align-self: center;
-    .agenda-details-wrapper {
+    .location-details-wrapper {
       margin: 66px 0 47px;
 
       &.subgrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        .agenda-detail-item {
+        .location-detail-item {
           display: flex;
           &:nth-child(2) {
             justify-self: end;
@@ -80,16 +75,20 @@
   }
 }
 
-.sponsors {
-  min-height: 260px;
-
-  .section-subtitle {
-    text-align: center;
-  }
-
+.committees {
+  min-height: 577px;
   .grid {
     min-height: initial;
-    grid-template-columns: repeat(4, minmax(100px, auto));
+    justify-items: center;
+    grid-template-columns: repeat(var(--max-3-columns), 1fr);
+  }
+}
+
+.sponsors {
+  min-height: 260px;
+  .grid {
+    min-height: initial;
+    grid-template-columns: repeat(var(--max-4-columns), auto);
     justify-content: center;
     justify-items: center;
     grid-column-gap: 60px;

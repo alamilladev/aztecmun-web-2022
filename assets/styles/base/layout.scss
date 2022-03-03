@@ -1,15 +1,16 @@
 // Columns config
 :root {
-  --columns: 4;
-  --column-gap: 6,67%;
+  --max-3-columns: 1;
+  --max-4-columns: 1;
 
   @include for-size(m) {
-    --columns: 12;
-    --column-gap: 2.27%
+    --max-3-columns: 2;
+    --max-4-columns: 3;
   }
 
   @include for-size(l) {
-    --column-gap: 2.19%;
+    --max-3-columns: 3;
+    --max-4-columns: 4;
   }
 }
 
@@ -36,8 +37,6 @@
 // Grid and subgrod config
 .grid, .subgrid {
   display: grid;
-  // grid-column-gap: var(--column-gap);
-  // grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
 
 body {

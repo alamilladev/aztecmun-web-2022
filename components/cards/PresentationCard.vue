@@ -1,10 +1,10 @@
 <template>
-  <div :class="['info-container', className]">
-    <img class="info-img" :src="imageUrl" :alt="imageAlt" width="100" loading="lazy">
-    <p class="info-description">{{ description }}</p>
-    <ButtonsLinkBtn 
-      type="outline"
-      color="quaternary"
+  <div :class="['presentation-container', className]">
+    <h3 class="presentation-title">{{ title }}</h3>
+    <img class="presentation-img" :src="imageUrl" :alt="imageAlt" width="180" loading="lazy">
+    <ButtonsLinkBtn
+      type="fill"
+      color="primary"
       size="medium"
       :link-url="buttonLink"
       :label="buttonLabel"
@@ -14,21 +14,21 @@
 
 <script>
 export default {
-  name: 'GeneralInfo',
+  name: 'PresentationCard',
   props: {
     className: {
       type: String,
       default: ''
+    },
+    title: {
+      type: String,
+      required: true
     },
     imageUrl: {
       type: String,
       required: true
     },
     imageAlt: {
-      type: String,
-      required: true
-    },
-    description: {
       type: String,
       required: true
     },
@@ -45,13 +45,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.info-container {
+.presentation-container {
   text-align: center;
-  max-width: 246px;
-  min-height: 296px;
+  max-width: 226px;
+  padding: 32px 28px;
+  background-color: $color-white;
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.25);
 
-  .info-description {
-    margin: 40px 0 29px;
+  .presentation-img {
+    margin: 19px 0;
   }
 }
 </style>
