@@ -1,12 +1,12 @@
 <template>
   <header>
     <div class="container grid">
-      <img class="logo" src="~/assets/images/logo.png" alt="Logo de AztecMUN edición 2022">
+      <LogoAztecmun />
       <nav>
-        <nuxt-link class="nav-link" to="/">Nosotros</nuxt-link>
-        <nuxt-link class="nav-link" to="/">Recursos</nuxt-link>
-        <nuxt-link class="nav-link" to="/">Agenda</nuxt-link>
-        <nuxt-link class="nav-link" to="/">Pago</nuxt-link>
+        <NuxtLink class="nav-link" to="/">Nosotros</NuxtLink>
+        <NuxtLink class="nav-link" to="/">Recursos</NuxtLink>
+        <NuxtLink class="nav-link" to="/">Agenda</NuxtLink>
+        <NuxtLink class="nav-link" to="/">Pago</NuxtLink>
         <ButtonsLinkBtn
           class-name="nav-btn"
           type="outline"
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'HeaderNavbar'
+  name: 'DefaultHeader'
 }
 </script>
 
@@ -43,9 +43,6 @@ header {
       .nav-link {
         margin-left: 49px;
         color: $color-black;
-        &:hover {
-          color: $color-quaternary;
-        }
       }
       .nav-btn {
         margin-left: 65px;

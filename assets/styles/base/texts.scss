@@ -41,6 +41,9 @@ a {
   font-size: $font-size-normal;
   font-family: $font-primary;
   text-decoration: none;
+  &:hover {
+    color: $color-quaternary;
+  }
 }
 
 .meidum { font-weight: 500; }

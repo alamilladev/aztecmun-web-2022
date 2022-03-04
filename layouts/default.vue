@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HeaderNavbar />
+    <DefaultHeader />
     <main>
       <Nuxt />
     </main>
-    <Footer />
+    <DefaultFooter />
   </div>
 </template>
 

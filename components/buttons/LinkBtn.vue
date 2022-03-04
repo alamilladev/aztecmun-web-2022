@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link :to="linkUrl" :class="['btn-link', className, type, color, size]">
+  <NuxtLink :to="linkUrl" :class="['btn-link', className, type, color, size]">
     {{ label }}
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <script>
