@@ -21,9 +21,9 @@
       </nav>
       <div class="contact-container">
         <div class="contact-icons-wrapper">
+          <!-- <IconsSocialMedia :icon-url="require('~/assets/')" />
           <IconsSocialMedia :icon-url="require('~/assets/')" />
-          <IconsSocialMedia :icon-url="require('~/assets/')" />
-          <IconsSocialMedia :icon-url="require('~/assets/')" />
+          <IconsSocialMedia :icon-url="require('~/assets/')" /> -->
         </div>
         <p>contacto@aztecmun.com</p>
       </div>

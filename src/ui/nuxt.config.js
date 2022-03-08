@@ -1,4 +1,12 @@
+import path from 'path'
+
 export default {
+  rootDir: '.',
+  srcDir: 'src/ui',
+
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  ssr: true,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'AztecMUN 2022',
@@ -56,7 +64,19 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/]
+    transpile: [/^element-ui/],
+    extend(config) {
+      const rootDir = this.buildContext.options.rootDir;
+      const joinSrc = (s) => path.join(rootDir, 'src', s);
+
+      if(!config?.resolve?.alias) {
+        throw new Error('webpack config aliases not found!');
+      }
+
+      config.resolve.alias['@modules'] = joinSrc('modules');
+      config.resolve.alias['@shared'] = joinSrc('shared');
+      config.resolve.alias['@ui'] = joinSrc('ui');
+    }
   },
 
   generate: {
