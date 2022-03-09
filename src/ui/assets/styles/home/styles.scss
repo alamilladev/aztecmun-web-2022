@@ -1,7 +1,7 @@
 .hero {
   min-height: 442px;
   background-color: $color-tertiary-variant;
-  
+
   .grid {
     grid-template-columns: 2fr 3fr;
     place-items: center;
@@ -80,7 +80,7 @@
   .grid {
     min-height: initial;
     justify-items: center;
-    grid-template-columns: repeat(var(--max-3-columns), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
 

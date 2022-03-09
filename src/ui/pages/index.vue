@@ -4,10 +4,14 @@
       <div class="container grid">
         <div class="hero-info">
           <h1>
-            Modelo de naciones unidas<br>
+            Modelo de naciones unidas<br />
             <span class="semibold">AztecMUN </span><i>edicion 2022</i>
           </h1>
-          <p>Forma parte de nosotros para desarrollar tus habilidades comunicativas y de pensamiento crítico-analítico a través del debate.</p>
+          <p>
+            Forma parte de nosotros para desarrollar tus habilidades
+            comunicativas y de pensamiento crítico-analítico a través del
+            debate.
+          </p>
           <div class="buttons-wrapper">
             <ButtonsLinkBtn
               type="fill"
@@ -16,7 +20,7 @@
               link-url="/"
               label="Registrate"
             />
-            <ButtonsLinkBtn 
+            <ButtonsLinkBtn
               type="outline"
               color="secondary"
               size="medium"
@@ -25,38 +29,46 @@
             />
           </div>
         </div>
-        <img class="hero-image" src="~/assets/images/home/hero.jpg" alt="Miembros del comité organizador de aztecmun">
+        <img
+          class="hero-image"
+          src="~/assets/images/home/hero.jpg"
+          alt="Miembros del comité organizador de aztecmun"
+        />
       </div>
     </section>
 
     <section class="invitation">
       <div class="container">
         <h2 class="section-subtitle text-center">
-          Forma parte del modelo y vive<br>
+          Forma parte del modelo y vive<br />
           una gran experiencia
         </h2>
         <div class="invitation-cards-wrapper grid">
           <CardsGeneralInfo
-            :image-url="require('~/assets/images/home/invitation/checklist.svg')"
+            :image-url="
+              require('~/assets/images/home/invitation/checklist.svg')
+            "
             image-alt="Icono de una lista con tareas completadas"
             description="Conoce más acerca de nosotros y las secretarías detrás del modelo."
             button-link="/"
             button-label="Conócenos"
-           />
-           <CardsGeneralInfo
+          />
+          <CardsGeneralInfo
             :image-url="require('~/assets/images/home/invitation/warning.svg')"
             image-alt="Icono color amarillo con un signo de exclamación como advertencia"
             description="Revisa la información de los comités que forman parte de esta edición."
             button-link="/"
             button-label="Ver comités"
-           />
-           <CardsGeneralInfo
-            :image-url="require('~/assets/images/home/invitation/signup-completed.svg')"
+          />
+          <CardsGeneralInfo
+            :image-url="
+              require('~/assets/images/home/invitation/signup-completed.svg')
+            "
             image-alt="Icono verde con la ilustracion de una persona y una marca de verificación"
             description="Completa el formulario de registro y realiza una aportación económica."
             button-link="/"
             button-label="Registrate"
-           />
+          />
         </div>
       </div>
     </section>
@@ -75,22 +87,37 @@
           <h2>Fecha y dirección de la sede</h2>
           <div class="location-details-wrapper subgrid">
             <div class="location-detail-item">
-              <img src="~/assets/images/home/location/calendar.svg" alt="Icono de calendario color amarillo" loading="lazy">
+              <img
+                src="~/assets/images/home/location/calendar.svg"
+                alt="Icono de calendario color amarillo"
+                loading="lazy"
+              />
               <p>
-                <strong>Días del modelo</strong><br>
+                <strong>Días del modelo</strong><br />
                 4 y 5 de Junio de 2022
               </p>
             </div>
             <div class="location-detail-item">
-              <img src="~/assets/images/home/location/cash-app.svg" alt="Icono del simbolo de dolar en color amarillo" loading="lazy">
+              <img
+                src="~/assets/images/home/location/cash-app.svg"
+                alt="Icono del simbolo de dolar en color amarillo"
+                loading="lazy"
+              />
               <p>
-                <strong>Monto a pagar</strong><br>
+                <strong>Monto a pagar</strong><br />
                 MXN $450
               </p>
             </div>
             <div class="location-detail-item">
-              <img src="~/assets/images/home/location/location.svg" alt="Icono del simbolo de dolar en color amarillo" loading="lazy">
-              <p>Av. Acueducto de Guadalupe 25, Santa Isabel Tola, Gustavo A. Madero, 07010 Ciudad de México, CDMX</p>
+              <img
+                src="~/assets/images/home/location/location.svg"
+                alt="Icono del simbolo de dolar en color amarillo"
+                loading="lazy"
+              />
+              <p>
+                Av. Acueducto de Guadalupe 25, Santa Isabel Tola, Gustavo A.
+                Madero, 07010 Ciudad de México, CDMX
+              </p>
             </div>
           </div>
           <ButtonsLinkBtn
@@ -105,7 +132,9 @@
     </section>
 
     <section class="committees">
-      <h2 class="section-subtitle text-center">Conoce los comités que forman parte de esta edición</h2>
+      <h2 class="section-subtitle text-center">
+        Conoce los comités que forman parte de esta edición
+      </h2>
       <div class="container grid">
         <CardsPresentationCard
           title="Comité Internacional de Bioética"
@@ -134,10 +163,30 @@
     <section class="sponsors">
       <h2 class="section-subtitle text-center">Nuestros patrocinadores</h2>
       <div class="container grid">
-        <img src="~/assets/images/home/sponsors/plantel-azteca.png" alt="logo de plantel azteca" height="50" loading="lazy">
-        <img src="~/assets/images/home/sponsors/grupo-salinas.png" alt="logo de grupo salinas" height="50" loading="lazy">
-        <img src="~/assets/images/home/sponsors/grupo-jumex.png" alt="logo de grupo jumex" height="50" loading="lazy">
-        <img src="~/assets/images/home/sponsors/fundacion-azteca.png" alt="logo de fundacion azteca" height="50" loading="lazy">
+        <img
+          src="~/assets/images/home/sponsors/plantel-azteca.png"
+          alt="logo de plantel azteca"
+          height="50"
+          loading="lazy"
+        />
+        <img
+          src="~/assets/images/home/sponsors/grupo-salinas.png"
+          alt="logo de grupo salinas"
+          height="50"
+          loading="lazy"
+        />
+        <img
+          src="~/assets/images/home/sponsors/grupo-jumex.png"
+          alt="logo de grupo jumex"
+          height="50"
+          loading="lazy"
+        />
+        <img
+          src="~/assets/images/home/sponsors/fundacion-azteca.png"
+          alt="logo de fundacion azteca"
+          height="50"
+          loading="lazy"
+        />
       </div>
     </section>
   </div>
@@ -146,10 +195,10 @@
 <script>
 export default {
   name: 'IndexPage',
-  layout: 'default'
-}
+  layout: 'default',
+};
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/styles/home/styles.scss';
+@import '@/assets/styles/home/styles.scss';
 </style>
