@@ -4,19 +4,19 @@
       <LogoAztecmun />
       <nav class="nav-container subgrid">
         <div class="nav-column">
-          <NuxtLink class="nav-link" to="/">Nosotros</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Secretarías</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Comités</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Nosotros</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Secretarías</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Comités</NuxtLink>
         </div>
         <div class="nav-column">
-          <NuxtLink class="nav-link" to="/">Recursos</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Agenda</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Pago</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Recursos</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Agenda</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Pago</NuxtLink>
         </div>
         <div class="nav-column">
-          <NuxtLink class="nav-link" to="/">Soporte</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
-          <NuxtLink class="nav-link" to="/">Estadísticas</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Soporte</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Blog</NuxtLink>
+          <NuxtLink class="nav-link black" to="/">Estadísticas</NuxtLink>
         </div>
       </nav>
       <div class="contact-container">
@@ -27,9 +27,7 @@
         </div>
         <p>contacto@aztecmun.com</p>
       </div>
-      <div class="constrols">
-        controls block
-      </div>
+      <div class="constrols">controls block</div>
     </div>
     <p class="copyright">&copy; AztecMUN 2022. Made with love.</p>
   </footer>
@@ -37,8 +35,8 @@
 
 <script>
 export default {
-  name: 'DefaultFooter'
-}
+  name: 'DefaultFooter',
+};
 </script>
 
 <style lang="scss" scoped>
@@ -62,7 +60,6 @@ footer {
       .nav-column {
         .nav-link {
           display: block;
-          color: $color-black;
           margin-bottom: 13px;
         }
       }

@@ -1,4 +1,8 @@
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   color: $color-black;
   font-family: $font-primary;
@@ -41,13 +45,25 @@ a {
   font-size: $font-size-normal;
   font-family: $font-primary;
   text-decoration: none;
+
+  &.black {
+    color: $color-black;
+  }
   &:hover {
     color: $color-quaternary;
   }
 }
 
-.meidum { font-weight: 500; }
-.semibold { font-weight: 600; }
-.bold { font-weight: 700; }
+.meidum {
+  font-weight: 500;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
 
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
