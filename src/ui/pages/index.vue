@@ -194,11 +194,14 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'HomePage',
   layout: 'default',
+  head: {
+    title: 'AztecMUN 2022 | Inicio',
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/home/styles.scss';
+@import '@ui/assets/styles/pages/home';
 </style>
