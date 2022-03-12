@@ -97,12 +97,15 @@
           :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
         >
           <template v-if="signupError === false">
-            <h1>¡Registro completado!</h1>
-            <p>Gracias por formar parte de AztecMUN 2022</p>
+            <h1 class="success-title">¡Registro completado!</h1>
+            <p>Espera más novedades pronto.</p>
           </template>
           <template v-else-if="signupError === true">
-            <h1>Ha ocurrido un error</h1>
-            <p>Intentalo más tarde. Si el error persiste, contáctanos</p>
+            <h1 class="error-title">Ha ocurrido un error</h1>
+            <p>
+              Intentalo más tarde. <br />
+              Si el error persiste, contáctanos.
+            </p>
           </template>
         </div>
         <ButtonsFormBtn

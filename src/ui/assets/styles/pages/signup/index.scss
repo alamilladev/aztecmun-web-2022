@@ -44,6 +44,16 @@
 
       .form-element {
         display: none;
+        h1 {
+          margin-bottom: 30px;
+          &.success-title {
+            color: $color-secondary;
+          }
+          &.error-title {
+            color: $color-quaternary;
+          }
+        }
+
         label {
           display: block;
           text-align: left;
