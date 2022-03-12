@@ -93,6 +93,18 @@
             <option value="UNSC">UNSC</option>
           </select>
         </div>
+        <div
+          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
+        >
+          <template v-if="signupError === false">
+            <h1>¡Registro completado!</h1>
+            <p>Gracias por formar parte de AztecMUN 2022</p>
+          </template>
+          <template v-else-if="signupError === true">
+            <h1>Ha ocurrido un error</h1>
+            <p>Intentalo más tarde. Si el error persiste, contáctanos</p>
+          </template>
+        </div>
         <ButtonsFormBtn
           class-name="signup-btn"
           type="fill"
@@ -107,14 +119,21 @@
 </template>
 
 <script>
+import { User } from '@@/src/app/modules/user';
+
 export default {
   name: 'SignupPage',
   layout: 'default',
   data() {
     return {
       slideAnimationClass: 'slide-in-right',
-      currentStepId: 1,
-      user: {
+      signupError: false,
+      stepId: {
+        current: 1,
+        minLimit: 0,
+        maxLimit: 8,
+      },
+      userForm: {
         age: '',
         state: '',
         school: '',
@@ -130,7 +149,7 @@ export default {
   },
   methods: {
     setStepStatusClass(stepId) {
-      if (stepId === this.currentStepId) {
+      if (stepId === this.stepId.current) {
         return 'active';
       } else {
         return 'inactive';
@@ -138,26 +157,35 @@ export default {
     },
     goToNextStep() {
       this.slideAnimationClass = 'slide-in-right';
-      this.currentStepId += 1;
-      const limitStepId = 8;
+      this.stepId.current += 1;
 
-      if (this.currentStepId === limitStepId) {
+      if (this.stepId.current === this.stepId.maxLimit) {
         this.submitForm();
-      } else if (this.currentStepId > limitStepId) {
+      } else if (this.stepId.current > this.stepId.maxLimit) {
         this.$router.push('/');
       }
     },
     goToPrevStep() {
       this.slideAnimationClass = 'slide-in-left';
-      this.currentStepId -= 1;
-      const limitStepId = 0;
+      this.stepId.current -= 1;
 
-      if (this.currentStepId === limitStepId) {
+      if (
+        this.stepId.current === this.stepId.minLimit ||
+        this.stepId.current === this.stepId.maxLimit - 1
+      ) {
         this.$router.push('/');
       }
     },
     submitForm() {
-      // TODO: integrate firebase
+      const user = new User();
+      user
+        .signup(this.userForm)
+        .then(() => {
+          this.signupError = false;
+        })
+        .catch(() => {
+          this.signupError = true;
+        });
     },
   },
 };
