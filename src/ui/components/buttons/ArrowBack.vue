@@ -1,12 +1,12 @@
 <template>
-  <nuxt-link :to="linkUrl" :class="[className, 'link-arrow']">
+  <button :class="[className, 'btn-arrow']" @click.prevent="onClick">
     <img
       src="~/assets/images/icons/arrow-back.svg"
       alt="Arrow back"
       width="30"
       height="30"
     />
-  </nuxt-link>
+  </button>
 </template>
 
 <script>
@@ -17,8 +17,8 @@ export default {
       type: String,
       default: '',
     },
-    linkUrl: {
-      type: String,
+    onClick: {
+      type: Function,
       required: true,
     },
   },
@@ -26,8 +26,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.link-arrow {
+.btn-arrow {
   display: block;
   width: 30px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 </style>

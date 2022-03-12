@@ -1,7 +1,7 @@
 <template>
   <button
     :class="['btn btn-form', className, type, color, size]"
-    @click="onClick"
+    @click.prevent="onClick"
   >
     {{ label }}
   </button>
@@ -41,7 +41,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/components/button.scss';
-
-// .btn-form {
-// }
 </style>
