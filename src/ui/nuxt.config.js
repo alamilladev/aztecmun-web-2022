@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 
 export default {
   rootDir: '.',
@@ -19,31 +19,31 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'true' },
-      { 
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'true',
+      },
+      {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&display=swap',
-      }
-    ]
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/styles/global.scss'
-  ],
-  
+  css: ['@/assets/styles/global.scss'],
+
   styleResources: {
     scss: [
       '@/assets/styles/base/variables/colors.scss',
       '@/assets/styles/base/variables/fonts.scss',
-      '@/assets/styles/base/variables/breakpoints.scss'
-    ]
+      '@/assets/styles/base/variables/breakpoints.scss',
+    ],
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '@/plugins/element-ui'
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,28 +55,25 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/style-resources'
-  ],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
     extend(config) {
       const rootDir = this.buildContext.options.rootDir;
       const joinSrc = (s) => path.join(rootDir, 'src', s);
 
-      if(!config?.resolve?.alias) {
+      if (!config?.resolve?.alias) {
         throw new Error('webpack config aliases not found!');
       }
 
       config.resolve.alias['@modules'] = joinSrc('modules');
       config.resolve.alias['@shared'] = joinSrc('shared');
       config.resolve.alias['@ui'] = joinSrc('ui');
-    }
+    },
   },
 
   generate: {
-    dir: 'dist'
-  }
-}
+    dir: 'dist',
+  },
+};
