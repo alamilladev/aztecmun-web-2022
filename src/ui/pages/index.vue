@@ -203,5 +203,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@ui/assets/styles/pages/home';
+@import '@/assets/styles/pages/home';
 </style>

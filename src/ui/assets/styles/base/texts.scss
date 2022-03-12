@@ -41,11 +41,15 @@ p {
   font-weight: 400;
 }
 
-a {
+a,
+button,
+input {
   font-size: $font-size-normal;
   font-family: $font-primary;
   text-decoration: none;
+}
 
+a {
   &.black {
     color: $color-black;
   }
