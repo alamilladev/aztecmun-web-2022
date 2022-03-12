@@ -7,13 +7,21 @@ $xl: 1440px; // Desktops
 
 // Mixin to handle breakpoints styles
 @mixin for-size($size) {
-  @if $size == xs {
-    @media (max-width: $s) { @content; }
+  @if $size == s {
+    @media (min-width: $s) {
+      @content;
+    }
   } @else if $size == m {
-    @media (min-width: $m) { @content; }
+    @media (min-width: $m) {
+      @content;
+    }
   } @else if $size == l {
-    @media (min-width: $l) { @content; }
+    @media (min-width: $l) {
+      @content;
+    }
   } @else if $size == xl {
-    @media (min-width: $xl) { @content; }
+    @media (min-width: $xl) {
+      @content;
+    }
   }
 }

@@ -3,16 +3,16 @@
     <div class="container grid">
       <LogoAztecmun />
       <nav>
-        <NuxtLink class="nav-link black" to="/">Nosotros</NuxtLink>
-        <NuxtLink class="nav-link black" to="/">Recursos</NuxtLink>
-        <NuxtLink class="nav-link black" to="/">Agenda</NuxtLink>
-        <NuxtLink class="nav-link black" to="/">Pago</NuxtLink>
+        <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
+        <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
+        <nuxt-link class="nav-link black" to="/">Agenda</nuxt-link>
+        <nuxt-link class="nav-link black" to="/">Pago</nuxt-link>
         <ButtonsLinkBtn
           class-name="nav-btn"
           type="outline"
           color="secondary"
           size="medium"
-          link-url="/"
+          link-url="/signup"
           label="Regístrate"
         />
       </nav>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'DefaultHeader',
+  name: 'HomeHeader',
 };
 </script>
 

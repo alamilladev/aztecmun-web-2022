@@ -1,5 +1,12 @@
 <template>
-  <h1>SignUP</h1>
+  <section class="signup background">
+    <div class="signup-container">
+      <div class="signup-container-head">
+        <ButtonsArrowBack class-name="signup-arrow" link-url="/" />
+        <LogoAztecmun class-name="signup-logo" />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

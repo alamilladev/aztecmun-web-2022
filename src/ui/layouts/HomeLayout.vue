@@ -1,15 +1,15 @@
 <template>
   <div>
-    <DefaultHeader />
+    <HomeHeader />
     <main>
       <Nuxt />
     </main>
-    <DefaultFooter />
+    <HomeFooter />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DefaultLayout'
+  name: 'HomeLayout'
 }
 </script>

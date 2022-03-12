@@ -17,7 +17,7 @@
               type="fill"
               color="primary"
               size="medium"
-              link-url="/"
+              link-url="/signup"
               label="Registrate"
             />
             <ButtonsLinkBtn
@@ -66,7 +66,7 @@
             "
             image-alt="Icono verde con la ilustracion de una persona y una marca de verificación"
             description="Completa el formulario de registro y realiza una aportación económica."
-            button-link="/"
+            button-link="/signup"
             button-label="Registrate"
           />
         </div>
@@ -195,7 +195,7 @@
 <script>
 export default {
   name: 'HomePage',
-  layout: 'default',
+  layout: 'HomeLayout',
   head: {
     title: 'AztecMUN 2022 | Inicio',
   },

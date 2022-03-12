@@ -1,8 +1,14 @@
 <template>
   <div :class="['info-container', className]">
-    <img class="info-img" :src="imageUrl" :alt="imageAlt" width="100" loading="lazy">
+    <img
+      class="info-img"
+      :src="imageUrl"
+      :alt="imageAlt"
+      width="100"
+      loading="lazy"
+    />
     <p class="info-description">{{ description }}</p>
-    <ButtonsLinkBtn 
+    <ButtonsLinkBtn
       type="outline"
       color="quaternary"
       size="medium"
@@ -18,30 +24,30 @@ export default {
   props: {
     className: {
       type: String,
-      default: ''
+      default: '',
     },
     imageUrl: {
       type: String,
-      required: true
+      required: true,
     },
     imageAlt: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
+      required: true,
     },
     buttonLink: {
       type: String,
-      required: true
+      required: true,
     },
     buttonLabel: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

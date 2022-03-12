@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink :to="linkUrl" :class="['btn-link', className, type, color, size]">
+  <nuxt-link :to="linkUrl" :class="['btn-link', className, type, color, size]">
     {{ label }}
-  </NuxtLink>
+  </nuxt-link>
 </template>
 
 <script>
@@ -10,56 +10,60 @@ export default {
   props: {
     className: {
       type: String,
-      default: ''
+      default: '',
     },
     type: {
       type: String,
-      required: true
+      required: true,
     },
     color: {
       type: String,
-      required: true
+      required: true,
     },
     size: {
       type: String,
-      required: true
+      required: true,
     },
     linkUrl: {
       type: String,
-      required: true
+      required: true,
     },
     label: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  .btn-link {
-    display: inline-block;
-    line-height: 40px;
-    border-radius: 6px;
-    text-align: center;
+.btn-link {
+  display: inline-block;
+  line-height: 40px;
+  border-radius: 6px;
+  text-align: center;
 
-    &.primary {
-      font-weight: 700;
-      border: 1px solid $color-primary;
-      background-color: $color-primary;
-      color: $color-white;
-    }
-    &.secondary {
-      font-weight: 600;
-      border: 1px solid $color-secondary;
-      color: $color-secondary;
-    }
-    &.quaternary {
-      font-weight: 600;
-      border: 1px solid $color-quaternary;
-      color: $color-quaternary;
-    }
-    &.small { width: 140px; }
-    &.medium { width: 180px; }
+  &.primary {
+    font-weight: 700;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
   }
+  &.secondary {
+    font-weight: 600;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+  }
+  &.quaternary {
+    font-weight: 600;
+    border: 1px solid $color-quaternary;
+    color: $color-quaternary;
+  }
+  &.small {
+    width: 140px;
+  }
+  &.medium {
+    width: 180px;
+  }
+}
 </style>

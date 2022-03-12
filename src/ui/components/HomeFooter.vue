@@ -4,19 +4,19 @@
       <LogoAztecmun />
       <nav class="nav-container subgrid">
         <div class="nav-column">
-          <NuxtLink class="nav-link black" to="/">Nosotros</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Secretarías</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Comités</NuxtLink>
+          <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Secretarías</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Comités</nuxt-link>
         </div>
         <div class="nav-column">
-          <NuxtLink class="nav-link black" to="/">Recursos</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Agenda</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Pago</NuxtLink>
+          <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Agenda</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Pago</nuxt-link>
         </div>
         <div class="nav-column">
-          <NuxtLink class="nav-link black" to="/">Soporte</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Blog</NuxtLink>
-          <NuxtLink class="nav-link black" to="/">Estadísticas</NuxtLink>
+          <nuxt-link class="nav-link black" to="/">Soporte</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Blog</nuxt-link>
+          <nuxt-link class="nav-link black" to="/">Estadísticas</nuxt-link>
         </div>
       </nav>
       <div class="contact-container">
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'DefaultFooter',
+  name: 'HomeFooter',
 };
 </script>
 

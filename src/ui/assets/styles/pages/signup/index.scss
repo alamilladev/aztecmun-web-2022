@@ -1,0 +1,35 @@
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  &.background {
+    background-color: $color-primary;
+    background-image: url('~assets/images/signup/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .signup-container {
+    max-width: 300px;
+    width: 100%;
+    min-height: 450px;
+    background-color: $color-white;
+
+    @include for-size(s) {
+      max-width: 400px;
+    }
+    @include for-size(m) {
+      max-width: 584px;
+    }
+
+    .signup-arrow {
+      margin: 10px 0 0 10px;
+    }
+    .signup-logo {
+      margin: 10px auto;
+    }
+  }
+}
