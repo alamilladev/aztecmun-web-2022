@@ -10,7 +10,7 @@ p {
 
 h1 {
   font-size: $font-size-x-large;
-  font-weight: 400;
+  font-weight: 600;
 
   @include for-size(m) {
     font-size: $font-size-xx-large;
