@@ -123,6 +123,21 @@
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(6)]"
         >
+          <label for="password">Contraseña:</label>
+          <input
+            id="password"
+            v-model="userData.password"
+            name="password"
+            type="password"
+            required
+            autofocus
+            class="form-input"
+            @input="setValidationErrorMessage(null)"
+          />
+        </div>
+        <div
+          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
+        >
           <label for="phone">Teléfono:</label>
           <input
             id="phone"
@@ -137,7 +152,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
         >
           <label for="committee">Comité:</label>
           <select
@@ -156,7 +171,7 @@
           </select>
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(9)]"
         >
           <template v-if="signupError === false">
             <h1 class="success-title">¡Registro completado!</h1>
@@ -200,7 +215,7 @@ export default {
       stepId: {
         current: 1,
         minLimit: 0,
-        maxLimit: 8,
+        maxLimit: 9,
       },
       userData: {
         age: '',
@@ -208,6 +223,7 @@ export default {
         school: '',
         education: 'Selecciona una opción',
         email: '',
+        password: '',
         phone: '',
         committee: 'Selecciona una opción',
       },
