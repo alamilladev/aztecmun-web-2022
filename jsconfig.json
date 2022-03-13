@@ -5,7 +5,10 @@
       "~/*": ["./*"],
       "@/*": ["./*"],
       "~~/*": ["./*"],
-      "@@/*": ["./*"]
+      "@@/*": ["./*"],
+      "@modules/*": ["./src/app/modules/*"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@ui/*": ["./src/ui/*"]
     }
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

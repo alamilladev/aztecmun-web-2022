@@ -1,0 +1,74 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  color: $color-black;
+  font-family: $font-primary;
+}
+
+h1 {
+  font-size: $font-size-x-large;
+  font-weight: 600;
+
+  @include for-size(m) {
+    font-size: $font-size-xx-large;
+  }
+}
+
+h2 {
+  font-size: $font-size-large;
+  font-weight: 600;
+
+  @include for-size(m) {
+    font-size: $font-size-x-large;
+  }
+
+  &.section-subtitle {
+    max-width: 465px;
+    margin: 64px auto 62px;
+  }
+}
+
+h3 {
+  font-size: $font-size-medium;
+  font-weight: 600;
+}
+
+p {
+  font-size: $font-size-normal;
+  font-weight: 400;
+}
+
+a,
+button,
+input,
+select {
+  font-size: $font-size-normal;
+  font-family: $font-primary;
+  text-decoration: none;
+}
+
+a {
+  &.black {
+    color: $color-black;
+  }
+  &:hover {
+    color: $color-quaternary;
+  }
+}
+
+.meidum {
+  font-weight: 500;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}

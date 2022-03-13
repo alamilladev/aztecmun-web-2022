@@ -1,0 +1,50 @@
+// Columns config
+:root {
+  --max-3-columns: 1;
+  --max-4-columns: 1;
+
+  @include for-size(m) {
+    --max-3-columns: 2;
+    --max-4-columns: 3;
+  }
+
+  @include for-size(l) {
+    --max-3-columns: 3;
+    --max-4-columns: 4;
+  }
+}
+
+// Grid config
+.container {
+  margin: 0 16px;
+  min-height: inherit;
+  height: inherit;
+
+  @include for-size(m) {
+    margin: 0 32px;
+  }
+
+  @include for-size(l) {
+    margin: 0 80px;
+  }
+
+  @include for-size(xl) {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+// Grid and subgrod config
+.grid,
+.subgrid {
+  display: grid;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
