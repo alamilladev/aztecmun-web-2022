@@ -196,6 +196,9 @@
 export default {
   name: 'HomePage',
   layout: 'HomeLayout',
+  async asyncData({ redirect }) {
+    await redirect('/maintenance');
+  },
   head: {
     title: 'AztecMUN 2022 | Inicio',
   },

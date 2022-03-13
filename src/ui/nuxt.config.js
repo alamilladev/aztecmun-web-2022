@@ -34,14 +34,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/global.scss'],
 
-  styleResources: {
-    scss: [
-      '@/assets/styles/base/variables/colors.scss',
-      '@/assets/styles/base/variables/fonts.scss',
-      '@/assets/styles/base/variables/breakpoints.scss',
-    ],
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -56,6 +48,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/style-resources'],
+
+  styleResources: {
+    scss: [
+      '@/assets/styles/base/variables/colors.scss',
+      '@/assets/styles/base/variables/fonts.scss',
+      '@/assets/styles/base/variables/breakpoints.scss',
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
