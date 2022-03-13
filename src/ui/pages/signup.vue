@@ -19,7 +19,7 @@
             required
             autofocus
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           />
         </div>
         <div
@@ -32,7 +32,7 @@
             required
             name="state"
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           >
             <option disabled selected>Selecciona una opción</option>
             <option value="Ciudad de México">Ciudad de México</option>
@@ -82,7 +82,7 @@
             required
             autofocus
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           />
         </div>
         <div
@@ -95,7 +95,7 @@
             required
             name="education"
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           >
             <option disabled selected>Selecciona una opción</option>
             <option value="secundaria">secundaria</option>
@@ -117,7 +117,7 @@
             required
             autofocus
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           />
         </div>
         <div
@@ -133,7 +133,7 @@
             required
             autofocus
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           />
         </div>
         <div
@@ -146,7 +146,7 @@
             required
             name="committee"
             class="form-input"
-            @input="removeValidationError"
+            @input="setValidationErrorMessage(null)"
           >
             <option disabled selected>Selecciona una opción</option>
             <option value="CIDH">CIDH</option>
@@ -170,8 +170,8 @@
             </p>
           </template>
         </div>
-        <p v-if="validationError" class="validation-error">
-          Revisa que los datos sean correctos
+        <p v-if="validationErrorMesage" class="validation-error">
+          {{ validationErrorMesage }}
         </p>
         <ButtonsFormBtn
           class-name="signup-btn"
@@ -196,7 +196,7 @@ export default {
     return {
       slideAnimationClass: 'slide-in-right',
       signupError: false,
-      validationError: false,
+      validationErrorMesage: null,
       stepId: {
         current: 1,
         minLimit: 0,
@@ -209,7 +209,7 @@ export default {
         education: 'Selecciona una opción',
         email: '',
         phone: '',
-        committee: '',
+        committee: 'Selecciona una opción',
       },
     };
   },
@@ -224,10 +224,10 @@ export default {
         return 'inactive';
       }
     },
-    removeValidationError() {
-      this.validationError = false;
+    setValidationErrorMessage(message) {
+      this.validationErrorMesage = message;
     },
-    validateInputData(stepId) {
+    async validateInputData(stepId) {
       const formLength = Object.keys(this.userData).length;
 
       for (let i = 1; i <= formLength; i++) {
@@ -239,29 +239,38 @@ export default {
             this.userData[id] !== '' &&
             this.userData[id] !== 'Selecciona una opción'
           ) {
-            this.removeValidationError();
+            if (id === 'email') {
+              const user = new User();
+              return await user.getStatus(this.userData.email);
+            } else {
+              this.setValidationErrorMessage(null);
+            }
           } else {
-            this.validationError = true;
+            this.setValidationErrorMessage('Este campo es obligatorio');
           }
         }
       }
     },
     goToNextStep() {
-      this.validateInputData(this.stepId.current);
-
-      if (!this.validationError) {
-        this.slideAnimationClass = 'slide-in-right';
-        this.stepId.current += 1;
-
-        if (this.stepId.current === this.stepId.maxLimit) {
-          this.submitForm();
-        } else if (this.stepId.current > this.stepId.maxLimit) {
-          this.$router.push('/');
+      this.validateInputData(this.stepId.current).then((status) => {
+        if (status === 'ALREADY_EXIST') {
+          this.setValidationErrorMessage('Ese email ya ha sido registrado');
         }
-      }
+
+        if (!this.validationErrorMesage) {
+          this.slideAnimationClass = 'slide-in-right';
+          this.stepId.current += 1;
+
+          if (this.stepId.current === this.stepId.maxLimit) {
+            this.submitForm();
+          } else if (this.stepId.current > this.stepId.maxLimit) {
+            this.$router.push('/');
+          }
+        }
+      });
     },
     goToPrevStep() {
-      this.validationError = false;
+      this.setValidationErrorMessage(null);
       this.slideAnimationClass = 'slide-in-left';
       this.stepId.current -= 1;
 
