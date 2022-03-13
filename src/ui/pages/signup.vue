@@ -12,25 +12,62 @@
           <label for="age">Edad:</label>
           <input
             id="age"
+            v-model="userData.age"
             name="age"
             type="number"
             placeholder="18"
             required
+            autofocus
             class="form-input"
+            @input="removeValidationError"
           />
         </div>
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(2)]"
         >
           <label for="state">Estado:</label>
-          <input
+          <select
             id="state"
-            name="state"
-            type="text"
-            placeholder="Ciudad de México"
+            v-model="userData.state"
             required
+            name="state"
             class="form-input"
-          />
+            @input="removeValidationError"
+          >
+            <option disabled selected>Selecciona una opción</option>
+            <option value="Ciudad de México">Ciudad de México</option>
+            <option value="Estado de México">Estado de México</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Durango">Durango</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Michoacán">Michoacán</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+          </select>
         </div>
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(3)]"
@@ -38,18 +75,29 @@
           <label for="school">Escuela de procedencia:</label>
           <input
             id="school"
+            v-model="userData.school"
             name="school"
             type="text"
             placeholder="Plantel Azteca CDMX"
             required
+            autofocus
             class="form-input"
+            @input="removeValidationError"
           />
         </div>
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(4)]"
         >
           <label for="education">Nivel de estudios:</label>
-          <select id="education" name="education" class="form-input">
+          <select
+            id="education"
+            v-model="userData.education"
+            required
+            name="education"
+            class="form-input"
+            @input="removeValidationError"
+          >
+            <option disabled selected>Selecciona una opción</option>
             <option value="secundaria">secundaria</option>
             <option value="preparatoria">preparatoria</option>
             <option value="universidad">universidad</option>
@@ -62,11 +110,14 @@
           <label for="email">Correo electronico:</label>
           <input
             id="email"
+            v-model="userData.email"
             name="email"
             type="email"
             placeholder="name@example.com"
             required
+            autofocus
             class="form-input"
+            @input="removeValidationError"
           />
         </div>
         <div
@@ -75,18 +126,29 @@
           <label for="phone">Teléfono:</label>
           <input
             id="phone"
+            v-model="userData.phone"
             name="phone"
             type="tel"
             placeholder="5564927362"
             required
+            autofocus
             class="form-input"
+            @input="removeValidationError"
           />
         </div>
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
         >
           <label for="committee">Comité:</label>
-          <select id="committee" name="committee" class="form-input">
+          <select
+            id="committee"
+            v-model="userData.committee"
+            required
+            name="committee"
+            class="form-input"
+            @input="removeValidationError"
+          >
+            <option disabled selected>Selecciona una opción</option>
             <option value="CIDH">CIDH</option>
             <option value="CIB">CIB</option>
             <option value="UNICEF">UNICEF</option>
@@ -108,6 +170,9 @@
             </p>
           </template>
         </div>
+        <p v-if="validationError" class="validation-error">
+          Revisa que los datos sean correctos
+        </p>
         <ButtonsFormBtn
           class-name="signup-btn"
           type="fill"
@@ -131,16 +196,17 @@ export default {
     return {
       slideAnimationClass: 'slide-in-right',
       signupError: false,
+      validationError: false,
       stepId: {
         current: 1,
         minLimit: 0,
         maxLimit: 8,
       },
-      userForm: {
+      userData: {
         age: '',
-        state: '',
+        state: 'Selecciona una opción',
         school: '',
-        education: '',
+        education: 'Selecciona una opción',
         email: '',
         phone: '',
         committee: '',
@@ -158,17 +224,44 @@ export default {
         return 'inactive';
       }
     },
-    goToNextStep() {
-      this.slideAnimationClass = 'slide-in-right';
-      this.stepId.current += 1;
+    removeValidationError() {
+      this.validationError = false;
+    },
+    validateInputData(stepId) {
+      const formLength = Object.keys(this.userData).length;
 
-      if (this.stepId.current === this.stepId.maxLimit) {
-        this.submitForm();
-      } else if (this.stepId.current > this.stepId.maxLimit) {
-        this.$router.push('/');
+      for (let i = 1; i <= formLength; i++) {
+        if (i === stepId) {
+          const id = Object.keys(this.userData)[stepId - 1];
+
+          if (
+            this.userData[id] &&
+            this.userData[id] !== '' &&
+            this.userData[id] !== 'Selecciona una opción'
+          ) {
+            this.removeValidationError();
+          } else {
+            this.validationError = true;
+          }
+        }
+      }
+    },
+    goToNextStep() {
+      this.validateInputData(this.stepId.current);
+
+      if (!this.validationError) {
+        this.slideAnimationClass = 'slide-in-right';
+        this.stepId.current += 1;
+
+        if (this.stepId.current === this.stepId.maxLimit) {
+          this.submitForm();
+        } else if (this.stepId.current > this.stepId.maxLimit) {
+          this.$router.push('/');
+        }
       }
     },
     goToPrevStep() {
+      this.validationError = false;
       this.slideAnimationClass = 'slide-in-left';
       this.stepId.current -= 1;
 
@@ -182,7 +275,7 @@ export default {
     submitForm() {
       const user = new User();
       user
-        .signup(this.userForm)
+        .signup(this.userData)
         .then(() => {
           this.signupError = false;
         })

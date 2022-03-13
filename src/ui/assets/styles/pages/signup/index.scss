@@ -81,6 +81,13 @@
         }
       }
 
+      .validation-error {
+        text-align: left;
+        margin-top: 9px;
+        font-size: $font-size-small;
+        color: $color-quaternary;
+      }
+
       .signup-btn {
         position: absolute;
         left: 0;
