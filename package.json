@@ -11,7 +11,7 @@
     "lint": "npm run lint:js",
     "lintfix": "npm run lint:js -- --fix",
     "test": "jest",
-    "clean": "rm -rf node_modules .nuxt .eslintcache package-lock.json"
+    "clean": "rm -rf node_modules .nuxt dist .eslintcache package-lock.json"
   },
   "dependencies": {
     "core-js": "^3.19.3",
