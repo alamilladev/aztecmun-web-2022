@@ -4,8 +4,11 @@
 
 <script>
 export default {
-  name: 'committeesPage',
+  name: 'CommitteesPage',
   layout: 'HomeLayout',
+  async asyncData({ redirect }) {
+    await redirect('/maintenance');
+  },
   head: {
     title: 'AztecMUN 2022 | Comités',
   },
