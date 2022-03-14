@@ -87,7 +87,7 @@
                 />
                 <p>
                   <strong>Días del modelo</strong><br />
-                  4 y 5 de Junio de 2022
+                  ? y ? de Junio de 2022
                 </p>
               </div>
               <div class="location-detail-item">
@@ -98,7 +98,7 @@
                 />
                 <p>
                   <strong>Monto a pagar</strong><br />
-                  MXN $450
+                  MXN $ ----
                 </p>
               </div>
             </div>
