@@ -1,14 +1,12 @@
 .hero {
   min-height: 450px;
   background-color: $color-tertiary-variant;
-  text-align: center;
 
-  .container {
-    @include for-size(l) {
-      display: grid;
+  .grid {
+    justify-items: center;
+    align-items: center;
+    @include for-size(xl) {
       grid-template-columns: repeat(auto-fit, minmax(483px, 1fr));
-      justify-items: center;
-      align-items: center;
     }
   }
 
@@ -16,7 +14,6 @@
     max-width: 483px;
     width: 100%;
     text-align: center;
-    margin: 0 auto;
     @include for-size(xl) {
       text-align: left;
     }
@@ -61,7 +58,6 @@
   min-height: 538px;
   .invitation-cards-wrapper {
     &.flex {
-      flex-wrap: wrap;
       justify-content: center;
       gap: 60px;
       @include for-size(xl) {
@@ -72,40 +68,50 @@
 }
 
 .location {
+  text-align: center;
   min-height: 538px;
   background-color: $color-gray-variant;
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  @include for-size(xl) {
+    text-align: left;
   }
 
+  .flex {
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+    @include for-size(l) {
+      gap: 88px;
+    }
+    @include for-size(xl) {
+      flex-direction: row-reverse;
+    }
+  }
   .location-map {
-    max-width: 450px;
-    max-height: 390px;
+    max-width: 460px;
     border: 0;
-    place-self: center;
   }
   .location-info {
-    max-width: 460px;
-    align-self: center;
+    max-width: 455px;
+    @include for-size(xl) {
+      max-width: 437px;
+    }
     .location-details-wrapper {
+      text-align: left;
       margin: 66px 0 47px;
 
-      &.subgrid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        .location-detail-item {
-          display: flex;
-          &:nth-child(2) {
-            justify-self: end;
-          }
-          &:last-child {
-            grid-column: 1 / 3;
-            margin-top: 40px;
-          }
-          img {
-            margin-right: 23px;
-          }
+      .location-top-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .location-detail-item {
+        display: flex;
+        margin-bottom: 20px;
+        @include for-size(xl) {
+          margin-bottom: 40px;
+        }
+        img {
+          margin-right: 23px;
         }
       }
     }
@@ -116,7 +122,6 @@
   min-height: 577px;
   .flex {
     min-height: initial;
-    flex-wrap: wrap;
     gap: 60px;
     justify-content: center;
   }

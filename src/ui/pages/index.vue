@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="hero">
-      <div class="container">
+      <div class="container grid">
         <div class="hero-info">
           <h1>
             Modelo de naciones unidas<br />
@@ -73,40 +73,34 @@
       </div>
     </section>
 
-    <!-- <section class="location">
-      <div class="container grid">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d768.1320780426878!2d-99.11695490812845!3d19.50125396904587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9db726e782f%3A0x506aac36c192aeb8!2sPlantel%20Fundaci%C3%B3n%20Azteca!5e0!3m2!1ses-419!2smx!4v1646262933007!5m2!1ses-419!2smx"
-          class="location-map"
-          width="100%"
-          height="100%"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+    <section class="location">
+      <div class="container flex">
         <div class="location-info">
           <h2>Fecha y dirección de la sede</h2>
-          <div class="location-details-wrapper subgrid">
-            <div class="location-detail-item">
-              <img
-                src="~/assets/images/home/location/calendar.svg"
-                alt="Icono de calendario color amarillo"
-                loading="lazy"
-              />
-              <p>
-                <strong>Días del modelo</strong><br />
-                4 y 5 de Junio de 2022
-              </p>
-            </div>
-            <div class="location-detail-item">
-              <img
-                src="~/assets/images/home/location/cash-app.svg"
-                alt="Icono del simbolo de dolar en color amarillo"
-                loading="lazy"
-              />
-              <p>
-                <strong>Monto a pagar</strong><br />
-                MXN $450
-              </p>
+          <div class="location-details-wrapper">
+            <div class="location-top-details">
+              <div class="location-detail-item">
+                <img
+                  src="~/assets/images/home/location/calendar.svg"
+                  alt="Icono de calendario color amarillo"
+                  loading="lazy"
+                />
+                <p>
+                  <strong>Días del modelo</strong><br />
+                  4 y 5 de Junio de 2022
+                </p>
+              </div>
+              <div class="location-detail-item">
+                <img
+                  src="~/assets/images/home/location/cash-app.svg"
+                  alt="Icono del simbolo de dolar en color amarillo"
+                  loading="lazy"
+                />
+                <p>
+                  <strong>Monto a pagar</strong><br />
+                  MXN $450
+                </p>
+              </div>
             </div>
             <div class="location-detail-item">
               <img
@@ -128,8 +122,15 @@
             label="Ver agenda"
           />
         </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d768.1320780426878!2d-99.11695490812845!3d19.50125396904587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9db726e782f%3A0x506aac36c192aeb8!2sPlantel%20Fundaci%C3%B3n%20Azteca!5e0!3m2!1ses-419!2smx!4v1646262933007!5m2!1ses-419!2smx"
+          class="location-map"
+          width="100%"
+          height="390px"
+          loading="lazy"
+        ></iframe>
       </div>
-    </section> -->
+    </section>
 
     <section class="committees">
       <h2 class="section-subtitle text-center">
