@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'HomeLayout'
-}
+  name: 'HomeLayout',
+};
 </script>

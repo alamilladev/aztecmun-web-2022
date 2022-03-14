@@ -1,7 +1,7 @@
 <template>
   <button :class="[className, 'btn-arrow']" @click.prevent="onClick">
     <img
-      src="~/assets/images/icons/arrow-back.svg"
+      src="https://res.cloudinary.com/aztecmun/image/upload/v1647255612/images/icons/arrow_back_a5tnin.svg"
       alt="Arrow back"
       width="30"
       height="30"
