@@ -4,7 +4,7 @@
       class="info-img"
       :src="imageUrl"
       :alt="imageAlt"
-      width="100"
+      height="100"
       loading="lazy"
     />
     <p class="info-description">{{ description }}</p>
