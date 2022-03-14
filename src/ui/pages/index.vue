@@ -112,7 +112,7 @@
           </div>
           <ButtonsLinkBtn
             type="fill"
-            color="primary"
+            color="secondary"
             size="medium"
             link-url="/"
             label="Ver agenda"

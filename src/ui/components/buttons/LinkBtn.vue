@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     :to="linkUrl"
-    :class="['btn btn-link', className, type, color, size]"
+    :class="['btn btn-link', color, type, size, className]"
   >
     {{ label }}
   </nuxt-link>
@@ -41,34 +41,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/components/button.scss';
-
-// .btn-link {
-//   display: inline-block;
-//   line-height: 40px;
-//   border-radius: 6px;
-//   text-align: center;
-
-//   &.primary {
-//     font-weight: 700;
-//     border: 1px solid $color-primary;
-//     background-color: $color-primary;
-//     color: $color-white;
-//   }
-//   &.secondary {
-//     font-weight: 600;
-//     border: 1px solid $color-secondary;
-//     color: $color-secondary;
-//   }
-//   &.quaternary {
-//     font-weight: 600;
-//     border: 1px solid $color-quaternary;
-//     color: $color-quaternary;
-//   }
-//   &.small {
-//     width: 140px;
-//   }
-//   &.medium {
-//     width: 180px;
-//   }
-// }
 </style>
