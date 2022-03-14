@@ -129,11 +129,9 @@
 
 .sponsors {
   min-height: 260px;
-  .grid {
+  .flex {
     min-height: initial;
-    grid-template-columns: repeat(var(--max-4-columns), auto);
     justify-content: center;
-    justify-items: center;
-    grid-column-gap: 60px;
+    gap: 60px;
   }
 }

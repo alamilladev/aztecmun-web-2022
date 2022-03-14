@@ -161,9 +161,9 @@
       </div>
     </section>
 
-    <!-- <section class="sponsors">
+    <section class="sponsors">
       <h2 class="section-subtitle text-center">Nuestros patrocinadores</h2>
-      <div class="container grid">
+      <div class="container flex">
         <img
           src="~/assets/images/home/sponsors/plantel-azteca.png"
           alt="logo de plantel azteca"
@@ -189,7 +189,7 @@
           loading="lazy"
         />
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
