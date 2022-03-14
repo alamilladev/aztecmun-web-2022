@@ -31,7 +31,7 @@
         </div>
         <img
           class="hero-image"
-          src="~/assets/images/home/hero.jpg"
+          src="https://res.cloudinary.com/aztecmun/image/upload/v1647246020/images/home/hero_gxlal4.jpg"
           alt="Miembros del comité organizador de aztecmun"
         />
       </div>
@@ -45,25 +45,21 @@
         </h2>
         <div class="invitation-cards-wrapper flex">
           <CardsGeneralInfo
-            :image-url="
-              require('~/assets/images/home/invitation/checklist.svg')
-            "
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246020/images/home/invitation/checklist_akbplx.svg"
             image-alt="Icono de una lista con tareas completadas"
             description="Conoce más acerca de nosotros y las secretarías detrás del modelo."
             button-link="/"
             button-label="Conócenos"
           />
           <CardsGeneralInfo
-            :image-url="require('~/assets/images/home/invitation/warning.svg')"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246020/images/home/invitation/warning_loku8q.svg"
             image-alt="Icono color amarillo con un signo de exclamación como advertencia"
             description="Revisa la información de los comités que forman parte de esta edición."
             button-link="/committees"
             button-label="Ver comités"
           />
           <CardsGeneralInfo
-            :image-url="
-              require('~/assets/images/home/invitation/signup-completed.svg')
-            "
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/invitation/signup-completed_xazmfk.svg"
             image-alt="Icono verde con la ilustracion de una persona y una marca de verificación"
             description="Completa el formulario de registro y realiza una aportación económica."
             button-link="/signup"
@@ -81,7 +77,7 @@
             <div class="location-top-details">
               <div class="location-detail-item">
                 <img
-                  src="~/assets/images/home/location/calendar.svg"
+                  src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/location/calendar_vo9xky.svg"
                   alt="Icono de calendario color amarillo"
                   loading="lazy"
                 />
@@ -92,7 +88,7 @@
               </div>
               <div class="location-detail-item">
                 <img
-                  src="~/assets/images/home/location/cash-app.svg"
+                  src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/location/cash-app_cfaurn.svg"
                   alt="Icono del simbolo de dolar en color amarillo"
                   loading="lazy"
                 />
@@ -104,7 +100,7 @@
             </div>
             <div class="location-detail-item">
               <img
-                src="~/assets/images/home/location/location.svg"
+                src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/location/location_nysqt8.svg"
                 alt="Icono del simbolo de dolar en color amarillo"
                 loading="lazy"
               />
@@ -139,21 +135,21 @@
       <div class="container flex">
         <CardsPresentationCard
           title="Comité Internacional de Bioética"
-          :image-url="require('~/assets/images/committees/logo-CIB.png')"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246021/images/committees/CIB/logo-CIB_afjkub.png"
           image-alt="Logo del comité internacional de Bioética"
           button-link="/"
           button-label="Ver más"
         />
         <CardsPresentationCard
           title="Corte Interamericana de Derechos Humanos"
-          :image-url="require('~/assets/images/committees/logo-CIDH.png')"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246021/images/committees/CIDH/logo-CIDH_l8gj5k.png"
           image-alt="Logo de la corte interamericana de derechos humanos"
           button-link="/"
           button-label="Ver más"
         />
         <CardsPresentationCard
           title="United Nations Security Council"
-          :image-url="require('~/assets/images/committees/logo-UNSC.png')"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647246021/images/committees/UNSC/logo-UNSC_ra7ki6.png"
           image-alt="Logo del consejo de seguridad de la ONU"
           button-link="/"
           button-label="Ver más"
@@ -165,25 +161,25 @@
       <h2 class="section-subtitle text-center">Nuestros patrocinadores</h2>
       <div class="container flex">
         <img
-          src="~/assets/images/home/sponsors/plantel-azteca.png"
+          src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/sponsors/plantel-azteca_zncc77.png"
           alt="logo de plantel azteca"
           height="50"
           loading="lazy"
         />
         <img
-          src="~/assets/images/home/sponsors/grupo-salinas.png"
+          src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/sponsors/grupo-salinas_dlit2x.png"
           alt="logo de grupo salinas"
           height="50"
           loading="lazy"
         />
         <img
-          src="~/assets/images/home/sponsors/grupo-jumex.png"
+          src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/sponsors/grupo-jumex_pohi1w.png"
           alt="logo de grupo jumex"
           height="50"
           loading="lazy"
         />
         <img
-          src="~/assets/images/home/sponsors/fundacion-azteca.png"
+          src="https://res.cloudinary.com/aztecmun/image/upload/v1647246019/images/home/sponsors/fundacion-azteca_nwmbaz.png"
           alt="logo de fundacion azteca"
           height="50"
           loading="lazy"

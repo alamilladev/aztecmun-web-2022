@@ -1,5 +1,7 @@
 <template>
-  <nuxt-link :to="iconUrl">icon</nuxt-link>
+  <a :href="linkUrl" target="_blank">
+    <img :src="imageUrl" :alt="imageAlt" loading="lazy" />
+  </a>
 </template>
 
 <script>
@@ -10,7 +12,15 @@ export default {
       type: String,
       default: '',
     },
-    iconUrl: {
+    linkUrl: {
+      type: String,
+      required: true,
+    },
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+    imageAlt: {
       type: String,
       required: true,
     },
