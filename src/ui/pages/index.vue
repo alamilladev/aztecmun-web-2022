@@ -5,7 +5,7 @@
         <div class="hero-info">
           <h1>
             Modelo de naciones unidas<br />
-            <span class="semibold">AztecMUN </span><i>edicion 2022</i>
+            <span class="semibold">AztecMUN </span><i>edición 2022</i>
           </h1>
           <p>
             Forma parte de nosotros para desarrollar tus habilidades
@@ -176,12 +176,6 @@
         <img
           src="https://res.cloudinary.com/aztecmun/image/upload/v1647255607/images/home/sponsors/logo_grupo_salinas_sjzaod.png"
           alt="logo de grupo salinas"
-          height="50"
-          loading="lazy"
-        />
-        <img
-          src="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/home/sponsors/logo_grupo_jumex_pohi1w_slnhzc.png"
-          alt="logo de grupo jumex"
           height="50"
           loading="lazy"
         />
