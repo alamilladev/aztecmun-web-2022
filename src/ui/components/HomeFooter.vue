@@ -37,7 +37,7 @@
             image-alt="Logo de youtube"
           />
         </div>
-        <p>contacto@aztecmun.com</p>
+        <p>aztecmun.plantelazteca@gmail.com</p>
       </div>
       <div class="constrols">controls block</div>
     </div>
@@ -83,7 +83,8 @@ footer {
     }
     .contact-icons-wrapper {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
+      gap: 15px;
       margin-bottom: 10px;
     }
   }
