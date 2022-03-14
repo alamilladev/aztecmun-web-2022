@@ -129,13 +129,13 @@
           />
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="committees">
       <h2 class="section-subtitle text-center">
         Conoce los comités que forman parte de esta edición
       </h2>
-      <div class="container grid">
+      <div class="container flex">
         <CardsPresentationCard
           title="Comité Internacional de Bioética"
           :image-url="require('~/assets/images/committees/logo-CIB.png')"
@@ -160,7 +160,7 @@
       </div>
     </section>
 
-    <section class="sponsors">
+    <!-- <section class="sponsors">
       <h2 class="section-subtitle text-center">Nuestros patrocinadores</h2>
       <div class="container grid">
         <img

@@ -1,7 +1,6 @@
 .hero {
   min-height: 450px;
   background-color: $color-tertiary-variant;
-  padding: 10px 0;
   text-align: center;
 
   .container {
@@ -115,10 +114,11 @@
 
 .committees {
   min-height: 577px;
-  .grid {
+  .flex {
     min-height: initial;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
   }
 }
 

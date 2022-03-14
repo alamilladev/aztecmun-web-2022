@@ -13,6 +13,13 @@
     --max-4-columns: 4;
   }
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 
 // Grid config
 .container {
@@ -34,21 +41,15 @@
   }
 }
 
-// Grid and subgrod config
+section {
+  padding: 30px 0;
+}
+
+// Grid and flex displays
 .grid,
 .subgrid {
   display: grid;
 }
-
 .flex {
   display: flex;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
 }

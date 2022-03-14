@@ -5,7 +5,7 @@
       class="presentation-img"
       :src="imageUrl"
       :alt="imageAlt"
-      width="180"
+      height="180"
       loading="lazy"
     />
     <ButtonsLinkBtn
@@ -53,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 .presentation-container {
   text-align: center;
-  max-width: 226px;
+  max-width: 281px;
   padding: 32px 28px;
   background-color: $color-white;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
