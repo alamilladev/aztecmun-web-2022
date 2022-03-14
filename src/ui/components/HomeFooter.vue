@@ -64,17 +64,14 @@ footer {
     &.flex {
       justify-content: center;
       align-items: center;
-      gap: 50px;
+      gap: 70px;
     }
     .nav-container {
       &.subgrid {
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 15px;
         @include for-size(s) {
-          grid-column-gap: 50px;
-        }
-        @include for-size(m) {
-          grid-column-gap: 90px;
+          grid-column-gap: 40px;
         }
       }
       .nav-column {
@@ -87,6 +84,7 @@ footer {
     .contact-icons-wrapper {
       display: flex;
       justify-content: space-evenly;
+      margin-bottom: 10px;
     }
   }
   .copyright {
