@@ -8,7 +8,7 @@
     --max-4-columns: 3;
   }
 
-  @include for-size(l) {
+  @include for-size(xl) {
     --max-3-columns: 3;
     --max-4-columns: 4;
   }
@@ -24,7 +24,7 @@
     margin: 0 32px;
   }
 
-  @include for-size(l) {
+  @include for-size(xl) {
     margin: 0 80px;
   }
 
@@ -38,6 +38,10 @@
 .grid,
 .subgrid {
   display: grid;
+}
+
+.flex {
+  display: flex;
 }
 
 body {

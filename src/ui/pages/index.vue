@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="hero">
-      <div class="container grid">
+      <div class="container">
         <div class="hero-info">
           <h1>
             Modelo de naciones unidas<br />
@@ -37,7 +37,7 @@
       </div>
     </section>
 
-    <section class="invitation">
+    <!-- <section class="invitation">
       <div class="container">
         <h2 class="section-subtitle text-center">
           Forma parte del modelo y vive<br />
@@ -188,7 +188,7 @@
           loading="lazy"
         />
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -196,9 +196,6 @@
 export default {
   name: 'HomePage',
   layout: 'HomeLayout',
-  async asyncData({ redirect }) {
-    await redirect('/maintenance');
-  },
   head: {
     title: 'AztecMUN 2022 | Inicio',
   },

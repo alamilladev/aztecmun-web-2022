@@ -1,29 +1,60 @@
 .hero {
-  min-height: 442px;
+  min-height: 450px;
   background-color: $color-tertiary-variant;
+  padding: 10px 0;
+  text-align: center;
 
-  .grid {
-    grid-template-columns: 2fr 3fr;
-    place-items: center;
+  .container {
+    @include for-size(l) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(483px, 1fr));
+      justify-items: center;
+      align-items: center;
+    }
   }
 
   .hero-info {
+    max-width: 483px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    @include for-size(xl) {
+      text-align: left;
+    }
     h1 {
-      font-weight: 400;
+      @include for-size(m) {
+        font-weight: 400;
+      }
     }
     p {
       margin: 32px 0 39px;
     }
     .buttons-wrapper {
-      display: flex;
+      a {
+        width: 100%;
+        max-width: 288px;
+      }
       a:first-child {
-        margin-right: 35px;
+        margin-bottom: 20px;
+      }
+      @include for-size(s) {
+        display: flex;
+        a:first-child {
+          margin-bottom: 0;
+          margin-right: 35px;
+        }
       }
     }
   }
-
   .hero-image {
+    margin-top: 30px;
     max-width: 547px;
+    width: 100%;
+
+    @include for-size(xl) {
+      max-width: 547px;
+      margin-top: 0;
+    }
   }
 }
 
