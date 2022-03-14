@@ -4,7 +4,7 @@
       <LogoAztecmun />
       <nav>
         <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
-        <nuxt-link class="nav-link black" to="/">Secretarías</nuxt-link>
+        <nuxt-link class="nav-link black" to="/committees">Comités</nuxt-link>
         <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
         <nuxt-link class="nav-link black" to="/">Agenda</nuxt-link>
         <ButtonsLinkBtn

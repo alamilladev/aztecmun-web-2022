@@ -6,7 +6,7 @@
         <div class="nav-column">
           <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
           <nuxt-link class="nav-link black" to="/">Secretarías</nuxt-link>
-          <nuxt-link class="nav-link black" to="/">Comités</nuxt-link>
+          <nuxt-link class="nav-link black" to="/committees">Comités</nuxt-link>
         </div>
         <div class="nav-column">
           <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>

@@ -57,7 +57,7 @@
             :image-url="require('~/assets/images/home/invitation/warning.svg')"
             image-alt="Icono color amarillo con un signo de exclamación como advertencia"
             description="Revisa la información de los comités que forman parte de esta edición."
-            button-link="/"
+            button-link="/committees"
             button-label="Ver comités"
           />
           <CardsGeneralInfo
@@ -87,7 +87,7 @@
                 />
                 <p>
                   <strong>Días del modelo</strong><br />
-                  ? y ? de Junio de 2022
+                  Junio de 2022
                 </p>
               </div>
               <div class="location-detail-item">
