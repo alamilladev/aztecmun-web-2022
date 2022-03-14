@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="container grid">
+    <div class="container flex">
       <LogoAztecmun />
       <nav>
         <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
@@ -31,20 +31,35 @@ header {
   position: sticky;
   top: 0;
   height: 70px;
+  @include for-size(xl) {
+    padding: 0 20px;
+  }
   background-color: $color-white;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-  .grid {
-    grid-template-columns: 1fr 3fr;
+  .flex {
     align-items: center;
+    justify-content: center;
+    @include for-size(l) {
+      justify-content: space-between;
+    }
 
     nav {
-      justify-self: end;
-      .nav-link {
-        margin-left: 49px;
+      display: none;
+      @include for-size(l) {
+        display: block;
+      }
+      .nav-link:not(:first-child) {
+        margin-left: 30px;
+        @include for-size(xl) {
+          margin-left: 49px;
+        }
       }
       .nav-btn {
-        margin-left: 65px;
+        margin-left: 45px;
+        @include for-size(xl) {
+          margin-left: 65px;
+        }
       }
     }
   }
