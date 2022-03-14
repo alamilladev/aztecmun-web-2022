@@ -4,9 +4,9 @@
       <LogoAztecmun />
       <nav>
         <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
+        <nuxt-link class="nav-link black" to="/">Secretarías</nuxt-link>
         <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
         <nuxt-link class="nav-link black" to="/">Agenda</nuxt-link>
-        <nuxt-link class="nav-link black" to="/">Pago</nuxt-link>
         <ButtonsLinkBtn
           class-name="nav-btn"
           type="outline"
@@ -56,7 +56,7 @@ header {
         }
       }
       .nav-btn {
-        margin-left: 45px;
+        margin-left: 30px;
         @include for-size(xl) {
           margin-left: 65px;
         }
