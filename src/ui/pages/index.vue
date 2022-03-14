@@ -37,13 +37,13 @@
       </div>
     </section>
 
-    <!-- <section class="invitation">
+    <section class="invitation">
       <div class="container">
         <h2 class="section-subtitle text-center">
           Forma parte del modelo y vive<br />
           una gran experiencia
         </h2>
-        <div class="invitation-cards-wrapper grid">
+        <div class="invitation-cards-wrapper flex">
           <CardsGeneralInfo
             :image-url="
               require('~/assets/images/home/invitation/checklist.svg')
@@ -73,7 +73,7 @@
       </div>
     </section>
 
-    <section class="location">
+    <!-- <section class="location">
       <div class="container grid">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d768.1320780426878!2d-99.11695490812845!3d19.50125396904587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9db726e782f%3A0x506aac36c192aeb8!2sPlantel%20Fundaci%C3%B3n%20Azteca!5e0!3m2!1ses-419!2smx!4v1646262933007!5m2!1ses-419!2smx"

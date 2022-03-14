@@ -61,9 +61,13 @@
 .invitation {
   min-height: 538px;
   .invitation-cards-wrapper {
-    &.grid {
-      grid-template-columns: repeat(var(--max-3-columns), 1fr);
-      justify-items: center;
+    &.flex {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      @include for-size(xl) {
+        gap: 120px;
+      }
     }
   }
 }
