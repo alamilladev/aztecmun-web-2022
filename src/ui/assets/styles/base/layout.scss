@@ -8,10 +8,17 @@
     --max-4-columns: 3;
   }
 
-  @include for-size(l) {
+  @include for-size(xl) {
     --max-3-columns: 3;
     --max-4-columns: 4;
   }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
 // Grid config
@@ -24,7 +31,7 @@
     margin: 0 32px;
   }
 
-  @include for-size(l) {
+  @include for-size(xl) {
     margin: 0 80px;
   }
 
@@ -34,17 +41,22 @@
   }
 }
 
-// Grid and subgrod config
+section {
+  padding: 30px 0 50px;
+  &.committees {
+    padding-bottom: 50px;
+  }
+  @include for-size(xl) {
+    padding: 0;
+  }
+}
+
+// Grid and flex displays
 .grid,
 .subgrid {
   display: grid;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 }

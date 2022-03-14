@@ -1,10 +1,9 @@
 <template>
   <nuxt-link to="/" :class="[className, 'link-logo']">
     <img
-      src="~/assets/images/logo.png"
+      src="https://res.cloudinary.com/aztecmun/image/upload/v1647255611/images/logo_jerlwn.png"
       alt="Logo de AztecMUN edición 2022"
       height="50"
-      loading="lazy"
     />
   </nuxt-link>
 </template>

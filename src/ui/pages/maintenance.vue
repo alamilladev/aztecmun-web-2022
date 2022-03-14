@@ -5,7 +5,7 @@
       Estamos trabajando para solucionar los errores <br />
       Gracias por su comprención
     </p>
-    <nuxt-link to="/signup" class="link">Probar registro</nuxt-link>
+    <nuxt-link to="/" class="link">Ir al inicio</nuxt-link>
   </div>
 </template>
 

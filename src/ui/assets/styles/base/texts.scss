@@ -4,8 +4,16 @@ h3,
 h4,
 p {
   margin: 0;
-  color: $color-black;
   font-family: $font-primary;
+}
+h2 {
+  color: $color-primary;
+}
+h1,
+h3,
+h4,
+p {
+  color: $color-black;
 }
 
 h1 {
@@ -27,7 +35,10 @@ h2 {
 
   &.section-subtitle {
     max-width: 465px;
-    margin: 64px auto 62px;
+    margin: 34px auto 62px;
+    @include for-size(xl) {
+      margin: 64px auto 62px;
+    }
   }
 }
 

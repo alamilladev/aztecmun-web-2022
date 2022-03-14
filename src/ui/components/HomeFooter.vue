@@ -1,12 +1,12 @@
 <template>
   <footer>
-    <div class="footer-main-content container grid">
+    <div class="footer-main-content container flex">
       <LogoAztecmun />
       <nav class="nav-container subgrid">
         <div class="nav-column">
           <nuxt-link class="nav-link black" to="/">Nosotros</nuxt-link>
           <nuxt-link class="nav-link black" to="/">Secretarías</nuxt-link>
-          <nuxt-link class="nav-link black" to="/">Comités</nuxt-link>
+          <nuxt-link class="nav-link black" to="/committees">Comités</nuxt-link>
         </div>
         <div class="nav-column">
           <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
@@ -21,9 +21,21 @@
       </nav>
       <div class="contact-container">
         <div class="contact-icons-wrapper">
-          <!-- <IconsSocialMedia :icon-url="require('~/assets/')" />
-          <IconsSocialMedia :icon-url="require('~/assets/')" />
-          <IconsSocialMedia :icon-url="require('~/assets/')" /> -->
+          <IconsSocialMedia
+            link-url="https://www.facebook.com/AZTECMUN2022"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255612/images/icons/social_media/facebook_cwhwiq.svg"
+            image-alt="logo de facebook"
+          />
+          <IconsSocialMedia
+            link-url="https://www.instagram.com/aztecmun/"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255612/images/icons/social_media/instagram_btelxy.svg"
+            image-alt="logo de instagram"
+          />
+          <IconsSocialMedia
+            link-url="https://www.youtube.com/channel/UCWfYUHG3iPIN63VlPUG7uGQ"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255614/images/icons/social_media/youtube_qsde9e.svg"
+            image-alt="Logo de youtube"
+          />
         </div>
         <p>contacto@aztecmun.com</p>
       </div>
@@ -48,14 +60,19 @@ footer {
     padding: 57px 0;
     min-height: initial;
     border-bottom: 1px solid $color-gray;
-    &.grid {
-      grid-template-columns: repeat(var(--max-4-columns), auto);
-      place-items: center;
+
+    &.flex {
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
     }
     .nav-container {
       &.subgrid {
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 90px;
+        grid-column-gap: 15px;
+        @include for-size(s) {
+          grid-column-gap: 40px;
+        }
       }
       .nav-column {
         .nav-link {
@@ -63,6 +80,11 @@ footer {
           margin-bottom: 13px;
         }
       }
+    }
+    .contact-icons-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
     }
   }
   .copyright {
