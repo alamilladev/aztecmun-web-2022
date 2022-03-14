@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="footer-main-content container grid">
+    <div class="footer-main-content container flex">
       <LogoAztecmun />
       <nav class="nav-container subgrid">
         <div class="nav-column">
@@ -48,14 +48,22 @@ footer {
     padding: 57px 0;
     min-height: initial;
     border-bottom: 1px solid $color-gray;
-    &.grid {
-      grid-template-columns: repeat(var(--max-4-columns), auto);
-      place-items: center;
+
+    &.flex {
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
     }
     .nav-container {
       &.subgrid {
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 90px;
+        grid-column-gap: 15px;
+        @include for-size(s) {
+          grid-column-gap: 50px;
+        }
+        @include for-size(m) {
+          grid-column-gap: 90px;
+        }
       }
       .nav-column {
         .nav-link {
