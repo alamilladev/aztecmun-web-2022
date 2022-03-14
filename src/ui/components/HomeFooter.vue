@@ -23,17 +23,17 @@
         <div class="contact-icons-wrapper">
           <IconsSocialMedia
             link-url="https://www.facebook.com/AZTECMUN2022"
-            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647247214/images/icons/social_media/facebook_tzhtxg.svg"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255612/images/icons/social_media/facebook_cwhwiq.svg"
             image-alt="logo de facebook"
           />
           <IconsSocialMedia
             link-url="https://www.instagram.com/aztecmun/"
-            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647247214/images/icons/social_media/instagram_oenhjq.svg"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255612/images/icons/social_media/instagram_btelxy.svg"
             image-alt="logo de instagram"
           />
           <IconsSocialMedia
             link-url="https://www.youtube.com/channel/UCWfYUHG3iPIN63VlPUG7uGQ"
-            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647248688/images/icons/social_media/youtube_dzyevq.svg"
+            image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255614/images/icons/social_media/youtube_qsde9e.svg"
             image-alt="Logo de youtube"
           />
         </div>

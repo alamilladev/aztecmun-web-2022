@@ -42,7 +42,10 @@ body {
 }
 
 section {
-  padding: 30px 0;
+  padding: 30px 0 50px;
+  &.committees {
+    padding-bottom: 50px;
+  }
   @include for-size(xl) {
     padding: 0;
   }
