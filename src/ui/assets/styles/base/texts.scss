@@ -35,9 +35,9 @@ h2 {
 
   &.section-subtitle {
     max-width: 465px;
-    margin: 34px auto 62px;
+    margin: 0 auto 62px;
     @include for-size(xl) {
-      margin: 64px auto 62px;
+      margin: 0 auto 62px;
     }
   }
 }

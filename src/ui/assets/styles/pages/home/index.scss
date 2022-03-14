@@ -1,5 +1,4 @@
 .hero {
-  min-height: 450px;
   background-color: $color-tertiary-variant;
 
   .grid {
@@ -56,7 +55,6 @@
 }
 
 .invitation {
-  min-height: 538px;
   .invitation-cards-wrapper {
     &.flex {
       justify-content: center;
@@ -68,70 +66,67 @@
   }
 }
 
-.location {
-  text-align: center;
-  min-height: 538px;
-  background-color: $color-gray-variant;
-  @include for-size(xl) {
-    text-align: left;
-  }
+// .location {
+//   text-align: center;
+//   min-height: 538px;
+//   background-color: $color-gray-variant;
+//   @include for-size(xl) {
+//     text-align: left;
+//   }
 
-  .flex {
-    justify-content: center;
-    align-items: center;
-    gap: 44px;
-    @include for-size(l) {
-      gap: 88px;
-    }
-    @include for-size(xl) {
-      flex-direction: row-reverse;
-    }
-  }
-  .location-map {
-    max-width: 460px;
-    border: 0;
-  }
-  .location-info {
-    max-width: 455px;
-    @include for-size(xl) {
-      max-width: 437px;
-    }
-    .location-details-wrapper {
-      text-align: left;
-      margin: 66px 0 47px;
+//   .flex {
+//     justify-content: center;
+//     align-items: center;
+//     gap: 44px;
+//     @include for-size(l) {
+//       gap: 88px;
+//     }
+//     @include for-size(xl) {
+//       flex-direction: row-reverse;
+//     }
+//   }
+//   .location-map {
+//     max-width: 460px;
+//     border: 0;
+//   }
+//   .location-info {
+//     max-width: 455px;
+//     @include for-size(xl) {
+//       max-width: 437px;
+//     }
+//     .location-details-wrapper {
+//       text-align: left;
+//       margin: 66px 0 47px;
 
-      .location-top-details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .location-detail-item {
-        display: flex;
-        margin-bottom: 20px;
-        @include for-size(xl) {
-          margin-bottom: 40px;
-        }
-        img {
-          margin-right: 23px;
-        }
-      }
-    }
-  }
-}
+//       .location-top-details {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//       }
+//       .location-detail-item {
+//         display: flex;
+//         margin-bottom: 20px;
+//         @include for-size(xl) {
+//           margin-bottom: 40px;
+//         }
+//         img {
+//           margin-right: 23px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .committees {
-  min-height: 577px;
+  background-color: $color-gray-variant;
   .flex {
-    min-height: initial;
     gap: 60px;
     justify-content: center;
   }
 }
 
 .sponsors {
-  min-height: 260px;
   .flex {
-    min-height: initial;
     justify-content: center;
     gap: 60px;
   }

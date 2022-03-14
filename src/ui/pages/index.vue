@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <section class="location">
+    <!-- <section class="location">
       <div class="container flex">
         <div class="location-info">
           <h2>Fecha y dirección de la sede</h2>
@@ -126,7 +126,7 @@
           loading="lazy"
         ></iframe>
       </div>
-    </section>
+    </section> -->
 
     <section class="committees">
       <h2 class="section-subtitle text-center">
