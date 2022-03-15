@@ -137,7 +137,7 @@
           title="Comité Internacional de Bioética"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIB/logo_CIB_wfntlj.svg"
           image-alt="Logo del comité internacional de Bioética"
-          button-link="/"
+          button-link="/committees/cib"
           button-label="Ver más"
         />
         <CardsPresentationCard

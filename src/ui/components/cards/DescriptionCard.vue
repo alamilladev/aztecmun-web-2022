@@ -1,6 +1,8 @@
 <template>
   <article :class="['description-card-container', className]">
     <img
+      v-if="divisionBar"
+      class="division-bar"
       src="https://res.cloudinary.com/aztecmun/image/upload/v1647298982/images/generic_illustrations/division_bar_jetwnb.svg"
       alt="Ilustración de manchas de colores para usar como barra de separación"
       width="100%"
@@ -11,12 +13,13 @@
         <h2 :class="['card-info-title', color]">{{ title }}</h2>
         <slot name="description"></slot>
         <ButtonsLinkBtn
+          v-if="button"
           class-name="see-more-btn"
           type="outline"
           :color="color"
           size="full"
-          :link-url="detailUrl"
-          label="Ver más"
+          :link-url="buttonUrl"
+          :label="buttonLabel"
         />
       </div>
       <img
@@ -37,6 +40,10 @@ export default {
       type: String,
       default: '',
     },
+    divisionBar: {
+      type: Boolean,
+      default: true,
+    },
     color: {
       type: String,
       required: true,
@@ -49,7 +56,15 @@ export default {
       type: String,
       required: true,
     },
-    detailUrl: {
+    button: {
+      type: Boolean,
+      default: true,
+    },
+    buttonUrl: {
+      type: String,
+      required: true,
+    },
+    buttonLabel: {
       type: String,
       required: true,
     },
@@ -73,9 +88,10 @@ export default {
       flex-direction: row-reverse;
     }
   }
-
+  .division-bar {
+    margin-bottom: 21px;
+  }
   .card-content-container {
-    margin-top: 21px;
     justify-content: center;
     align-items: center;
     @include for-size(xl) {

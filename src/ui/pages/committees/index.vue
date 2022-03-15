@@ -16,7 +16,8 @@
           color="secondary"
           breadcrumb="Comité en español"
           title="CIB (Comité Internacional de Bioética)"
-          detail-url="/"
+          button-url="/committees/cib"
+          button-label="Ver más"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIB/logo_CIB_wfntlj.svg"
           image-alt="Logo del la UNESCO, organización a la que pertenece el Comité Internacional de Bioética"
         >
@@ -42,7 +43,8 @@
           color="tertiary"
           breadcrumb="Comité en español"
           title="CIDH (Corte Interamericana de Derechos Humanos)"
-          detail-url="/"
+          button-url="/"
+          button-label="Ver más"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIDH/logo_CIDH_mpksev.svg"
           image-alt="Logo de la Corte Interamericana de Derechos Humanos"
         >
@@ -67,7 +69,8 @@
           color="primary"
           breadcrumb="Comité en inglés"
           title="UNICEF (United Nations Children's Fund)"
-          detail-url="/"
+          button-url="/"
+          button-label="Ver más"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
           image-alt="Logo of United Nations Children's Fund"
         >
@@ -96,7 +99,8 @@
           color="quaternary"
           breadcrumb="Comité en inglés"
           title="UNSC (The United Nations Security Council)"
-          detail-url="/"
+          button-url="/"
+          button-label="Ver más"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
           image-alt="Logo of the United Nations Security Council"
         >
