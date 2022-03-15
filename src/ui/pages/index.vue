@@ -24,7 +24,7 @@
               type="outline"
               color="secondary"
               size="medium"
-              link-url="/"
+              link-url="/secretariats"
               label="Conócenos"
             />
           </div>
@@ -48,7 +48,7 @@
             image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255611/images/home/invitation/checklist_vfrhoj.svg"
             image-alt="Icono de una lista con tareas completadas"
             description="Conoce más acerca de nosotros y las secretarías detrás del modelo."
-            button-link="/"
+            button-link="/secretariats"
             button-label="Conócenos"
           />
           <CardsGeneralInfo
