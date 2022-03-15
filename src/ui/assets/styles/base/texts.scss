@@ -2,33 +2,48 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+span,
+a {
   margin: 0;
   font-family: $font-primary;
-}
-h2 {
-  color: $color-primary;
-}
-h1,
-h3,
-h4,
-p {
-  color: $color-black;
+
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+  &.tertiary {
+    color: $color-tertiary;
+  }
+  &.quaternary {
+    color: $color-quaternary;
+  }
+  &.gray {
+    color: $color-gray;
+  }
+  &.black {
+    color: $color-black;
+  }
 }
 
 h1 {
   font-size: $font-size-x-large;
-  font-weight: 600;
-
+  font-weight: 700;
   @include for-size(m) {
     font-size: $font-size-xx-large;
+  }
+  &.page-title {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
 h2 {
   font-size: $font-size-large;
   font-weight: 600;
-
   @include for-size(m) {
     font-size: $font-size-x-large;
   }
@@ -62,9 +77,6 @@ select {
 }
 
 a {
-  &.black {
-    color: $color-black;
-  }
   &:hover {
     color: $color-quaternary;
   }

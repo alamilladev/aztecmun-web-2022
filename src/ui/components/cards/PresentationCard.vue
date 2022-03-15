@@ -5,13 +5,13 @@
       class="presentation-img"
       :src="imageUrl"
       :alt="imageAlt"
-      height="180"
+      height="170"
       loading="lazy"
     />
     <ButtonsLinkBtn
       type="fill"
       color="primary"
-      size="medium"
+      size="full"
       :link-url="buttonLink"
       :label="buttonLabel"
     />

@@ -39,7 +39,7 @@
 
     <section class="invitation">
       <div class="container">
-        <h2 class="section-subtitle text-center">
+        <h2 class="primary section-subtitle text-center">
           Forma parte del modelo y vive<br />
           una gran experiencia
         </h2>
@@ -129,7 +129,7 @@
     </section> -->
 
     <section class="committees">
-      <h2 class="section-subtitle text-center">
+      <h2 class="primary section-subtitle text-center">
         Conoce los comités que forman parte de esta edición
       </h2>
       <div class="container flex">
@@ -165,7 +165,9 @@
     </section>
 
     <section class="sponsors">
-      <h2 class="section-subtitle text-center">Nuestros patrocinadores</h2>
+      <h2 class="primary section-subtitle text-center">
+        Nuestros patrocinadores
+      </h2>
       <div class="container flex">
         <img
           src="https://res.cloudinary.com/aztecmun/image/upload/v1647255607/images/home/sponsors/logo_plantel_azteca_w67uyv.png"

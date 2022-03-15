@@ -1,11 +1,17 @@
 .btn {
   display: inline-block;
-  line-height: 40px;
-  border-radius: 6px;
   text-align: center;
-  background-color: none;
+  line-height: 40px;
   padding: 0;
+  border-radius: 6px;
+  background-color: none;
   cursor: pointer;
+
+  &.secondary,
+  &.tertiary,
+  &.quaternary {
+    font-weight: 600;
+  }
 
   &.primary {
     font-weight: 700;
@@ -17,7 +23,6 @@
     }
   }
   &.secondary {
-    font-weight: 600;
     color: $color-secondary;
     border: 1px solid $color-secondary;
     &.fill {
@@ -25,8 +30,15 @@
       color: $color-white;
     }
   }
+  &.tertiary {
+    color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    &.fill {
+      background-color: $color-tertiary;
+      color: $color-white;
+    }
+  }
   &.quaternary {
-    font-weight: 600;
     color: $color-quaternary;
     border: 1px solid $color-quaternary;
     &.fill {
@@ -39,5 +51,8 @@
   }
   &.medium {
     width: 180px;
+  }
+  &.full {
+    width: 100%;
   }
 }
