@@ -1,0 +1,15 @@
+.secretariats {
+  .secretariats-wrapper {
+    margin-top: 90px;
+
+    .secretariat-card {
+      margin: 0 auto;
+      &:not(:first-child) {
+        margin-top: 70px;
+        @include for-size(xl) {
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+}

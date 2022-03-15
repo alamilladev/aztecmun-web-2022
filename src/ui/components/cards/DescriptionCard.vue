@@ -7,7 +7,7 @@
     />
     <div class="card-content-container flex">
       <div class="card-content-info">
-        <span class="breadcrumb gray">{{ breadcrumb }}</span>
+        <span v-if="breadcrumb" class="breadcrumb gray">{{ breadcrumb }}</span>
         <h2 :class="['card-info-title', color]">{{ title }}</h2>
         <slot name="description"></slot>
         <ButtonsLinkBtn
@@ -43,7 +43,7 @@ export default {
     },
     breadcrumb: {
       type: String,
-      required: true,
+      default: null,
     },
     title: {
       type: String,
