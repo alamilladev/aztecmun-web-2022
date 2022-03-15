@@ -137,28 +137,28 @@
           title="Comité Internacional de Bioética"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIB/logo_CIB_wfntlj.svg"
           image-alt="Logo del comité internacional de Bioética"
-          button-link="/"
+          button-link="/committees/cib"
           button-label="Ver más"
         />
         <CardsPresentationCard
           title="Corte Interamericana de Derechos Humanos"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIDH/logo_CIDH_mpksev.svg"
           image-alt="Logo de la corte interamericana de derechos humanos"
-          button-link="/"
-          button-label="Ver más"
-        />
-        <CardsPresentationCard
-          title="United Nations Security Council"
-          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
-          image-alt="Logo del consejo de seguridad de la ONU"
-          button-link="/"
+          button-link="/committees/cidh"
           button-label="Ver más"
         />
         <CardsPresentationCard
           title="United Nations Children's Fund"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
           image-alt="Logo del Fondo de las Naciones Unidas para la Infancia"
-          button-link="/"
+          button-link="/committees/unicef"
+          button-label="Ver más"
+        />
+        <CardsPresentationCard
+          title="United Nations Security Council"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
+          image-alt="Logo del consejo de seguridad de la ONU"
+          button-link="/committees/unsc"
           button-label="Ver más"
         />
       </div>

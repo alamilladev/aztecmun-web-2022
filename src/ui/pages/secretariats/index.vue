@@ -9,7 +9,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría General"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647350813/images/logo_mundo_tklpzx.png"
           image-alt="Logo del la Secretaría general"
         >
@@ -34,7 +34,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría Académica"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346425/images/secretariats/academic/logo_secretaria_academica_ilgosc.svg"
           image-alt="Logo del la Secretaría Académica"
         >
@@ -56,7 +56,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Desarrollo Sostenible"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346449/images/secretariats/sustainable_development/logo_secretaria_desarrollo_cxoq87.svg"
           image-alt="Logo del la Secretaría de Desarrollo Sostenible"
         >
@@ -81,7 +81,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Inglés"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346565/images/secretariats/english/logo_secretaria_ingles_kemu1n.svg"
           image-alt="Logo del la Secretaría de Inglés"
         >
@@ -107,7 +107,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Relaciones Públicas"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647349568/images/secretariats/public_relations/logo_secretaria_relaciones_curhpb.svg"
           image-alt="Logo del la Secretaría de Relaciones Públicas"
         >
@@ -123,7 +123,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Logística"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346577/images/secretariats/logistics/logo_secretaria_logistica_iywe2d.svg"
           image-alt="Logo del la Secretaría de Logística"
         >
@@ -143,7 +143,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Finanzas"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346591/images/secretariats/finance/logo_secretaria_finanzas_jtfvuo.svg"
           image-alt="Logo del la Secretaría de Finanzas"
         >
@@ -161,7 +161,7 @@
           class-name="secretariat-card"
           color="secondary"
           title="Secretaría de Diseño e Informática"
-          detail-url="/"
+          :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346621/images/secretariats/design_and_informatics/logo_secretaria_informatica_qekb8e.svg"
           image-alt="Logo del la Secretaría de Diseño e Informática"
         >
