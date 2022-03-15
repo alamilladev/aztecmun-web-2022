@@ -37,6 +37,36 @@
         image-alt="Logo del la UNESCO, organización a la que pertenece el Comité Internacional de Bioética"
         video-url="https://www.youtube.com/embed/ZVF4KEHk8A0"
       />
+      <div class="members-container">
+        <h2 class="primary section-subtitle text-center">
+          Integrantes de la mesa
+        </h2>
+        <ImagesGalleryWrapper>
+          <template #images>
+            <figure>
+              <img
+                src="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/CIB/IMG_3392_nwrkbz.jpg"
+                alt="Integrante de CIB"
+              />
+              <figcaption>Presidente</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://res.cloudinary.com/aztecmun/image/upload/v1647255611/images/committees/CIB/IMG_3409_fccc3r.jpg"
+                alt="Integrante de CIB"
+              />
+              <figcaption>Asesor</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://res.cloudinary.com/aztecmun/image/upload/v1647255610/images/committees/CIB/IMG_3401_fqrwhr.jpg"
+                alt="Integrante de CIB"
+              />
+              <figcaption>Mooderador</figcaption>
+            </figure>
+          </template>
+        </ImagesGalleryWrapper>
+      </div>
     </div>
   </section>
 </template>

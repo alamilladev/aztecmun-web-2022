@@ -1,5 +1,5 @@
 <template>
-  <section class="signup background">
+  <section class="signup background flex">
     <div class="signup-container">
       <div class="signup-container-head">
         <ButtonsArrowBack class-name="signup-arrow" :on-click="goToPrevStep" />
