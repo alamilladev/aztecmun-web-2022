@@ -6,10 +6,11 @@
       src="https://res.cloudinary.com/aztecmun/image/upload/v1647298982/images/generic_illustrations/division_bar_jetwnb.svg"
       alt="Ilustración de manchas de colores para usar como barra de separación"
       width="100%"
+      loading="lazy"
     />
     <div class="content-wrapper">
       <div class="content-left">
-        <img :src="imageUrl" :alt="imageAlt" width="100%" />
+        <img :src="imageUrl" :alt="imageAlt" width="100%" loading="lazy" />
         <ButtonsLinkBtn
           type="fill"
           color="primary"
@@ -35,6 +36,7 @@
       src="https://res.cloudinary.com/aztecmun/image/upload/v1647298982/images/generic_illustrations/division_bar_jetwnb.svg"
       alt="Ilustración de manchas de colores para usar como barra de separación"
       width="100%"
+      loading="lazy"
     />
   </div>
 </template>

@@ -6,6 +6,7 @@
       src="https://res.cloudinary.com/aztecmun/image/upload/v1647298982/images/generic_illustrations/division_bar_jetwnb.svg"
       alt="Ilustración de manchas de colores para usar como barra de separación"
       width="100%"
+      loading="lazy"
     />
     <div class="card-content-container flex">
       <div class="card-content-info">

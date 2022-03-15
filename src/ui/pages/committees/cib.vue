@@ -38,7 +38,7 @@
         video-url="https://www.youtube.com/embed/ZVF4KEHk8A0"
       />
       <div class="members-container">
-        <h2 class="primary section-subtitle text-center">
+        <h2 class="secondary section-subtitle text-center">
           Integrantes de la mesa
         </h2>
         <ImagesGalleryWrapper>
@@ -47,6 +47,7 @@
               <img
                 src="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/CIB/IMG_3392_nwrkbz.jpg"
                 alt="Integrante de CIB"
+                loading="lazy"
               />
               <figcaption>Presidente</figcaption>
             </figure>
@@ -54,6 +55,7 @@
               <img
                 src="https://res.cloudinary.com/aztecmun/image/upload/v1647255611/images/committees/CIB/IMG_3409_fccc3r.jpg"
                 alt="Integrante de CIB"
+                loading="lazy"
               />
               <figcaption>Asesor</figcaption>
             </figure>
@@ -61,8 +63,9 @@
               <img
                 src="https://res.cloudinary.com/aztecmun/image/upload/v1647255610/images/committees/CIB/IMG_3401_fqrwhr.jpg"
                 alt="Integrante de CIB"
+                loading="lazy"
               />
-              <figcaption>Mooderador</figcaption>
+              <figcaption>Moderador</figcaption>
             </figure>
           </template>
         </ImagesGalleryWrapper>
@@ -73,7 +76,7 @@
 
 <script>
 export default {
-  name: 'CommitteesPage',
+  name: 'CibDescriptionPage',
   layout: 'HomeLayout',
   head: {
     title: 'AztecMUN 2022 | CIB',
