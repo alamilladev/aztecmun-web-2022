@@ -61,7 +61,7 @@
           <CardsGeneralInfo
             image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255611/images/home/invitation/signup_completed_pw6ekg.svg"
             image-alt="Icono verde con la ilustracion de una persona y una marca de verificación"
-            description="Completa el formulario de registro y realiza una aportación económica."
+            description="Completa el formulario de registro para unirte a un comité de AztecMUN 2022"
             button-link="/signup"
             button-label="Registrate"
           />
