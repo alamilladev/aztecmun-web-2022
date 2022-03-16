@@ -25,4 +25,7 @@ export class User {
       throw new Error(error);
     }
   }
+  listenLatestRegisteredUsers(callback) {
+    this.db.listenLatestData(callback);
+  }
 }
