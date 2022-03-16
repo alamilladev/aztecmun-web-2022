@@ -80,6 +80,25 @@
         <CardsDescriptionCard
           class-name="secretariat-card"
           color="secondary"
+          title="Secretaría de Protocolo"
+          :button="false"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346465/images/secretariats/protocol/logo_secretaria_protocolo_fezdvr.svg"
+          image-alt="Logo del la Secretaría de Protocolo"
+        >
+          <template #description>
+            <p>
+              La Secretaría de Protocolo tiene la responsabilidad de regular la
+              conducta estableciendo los procedimientos, actitudes y conducción
+              que se tendrán durante el desarrollo del modelo. Así como instruir
+              a las mesas en la correcta aplicación del protocolo para llevar a
+              cabo un debate diplomático y que ayude a crecer a los
+              participantes.
+            </p>
+          </template>
+        </CardsDescriptionCard>
+        <CardsDescriptionCard
+          class-name="secretariat-card"
+          color="secondary"
           title="Secretaría de Inglés"
           :button="false"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647346565/images/secretariats/english/logo_secretaria_ingles_kemu1n.svg"

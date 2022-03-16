@@ -63,11 +63,11 @@ export default {
     },
     buttonUrl: {
       type: String,
-      required: true,
+      default: '',
     },
     buttonLabel: {
       type: String,
-      required: true,
+      default: '',
     },
     imageUrl: {
       type: String,
