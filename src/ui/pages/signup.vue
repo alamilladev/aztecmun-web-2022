@@ -9,6 +9,22 @@
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(1)]"
         >
+          <label for="age">Nombre completo:</label>
+          <input
+            id="name"
+            v-model="userData.name"
+            name="name"
+            type="text"
+            placeholder="Nombre completo"
+            required
+            autofocus
+            class="form-input"
+            @input="setValidationErrorMessage(null)"
+          />
+        </div>
+        <div
+          :class="['form-element', slideAnimationClass, setStepStatusClass(2)]"
+        >
           <label for="age">Edad:</label>
           <input
             id="age"
@@ -23,7 +39,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(2)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(3)]"
         >
           <label for="state">Estado:</label>
           <select
@@ -70,7 +86,7 @@
           </select>
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(3)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(4)]"
         >
           <label for="school">Escuela de procedencia:</label>
           <input
@@ -86,7 +102,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(4)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(5)]"
         >
           <label for="education">Nivel de estudios:</label>
           <select
@@ -105,7 +121,7 @@
           </select>
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(5)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(6)]"
         >
           <label for="email">Correo electronico:</label>
           <input
@@ -121,7 +137,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(6)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
         >
           <label for="password">Contraseña:</label>
           <input
@@ -136,7 +152,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
         >
           <label for="phone">Teléfono:</label>
           <input
@@ -152,7 +168,7 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(9)]"
         >
           <label for="committee">Comité:</label>
           <select
@@ -171,7 +187,7 @@
           </select>
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(9)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(10)]"
         >
           <template v-if="signupError === false">
             <h1 class="success-title">¡Registro completado!</h1>
@@ -215,9 +231,10 @@ export default {
       stepId: {
         current: 1,
         minLimit: 0,
-        maxLimit: 9,
+        maxLimit: 10,
       },
       userData: {
+        name: '',
         age: '',
         state: 'Selecciona una opción',
         school: '',
