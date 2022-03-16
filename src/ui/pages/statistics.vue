@@ -5,7 +5,7 @@
         Estádisticas de registro de delegados para comités
       </h1>
 
-      <div class="statistics-table-container">grafico de estadisticas</div>
+      <div class="statistics-graph-container">Grafico de estadisticas</div>
     </div>
   </section>
 </template>
@@ -19,11 +19,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.statistics {
-  .statistics-table-container {
-    overflow-x: auto;
-  }
-}
-</style>
