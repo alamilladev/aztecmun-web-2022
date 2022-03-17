@@ -1,6 +1,6 @@
 import { Database } from '@@/src/app/shared/firebase/db';
 
-export class User {
+export default class User {
   constructor() {
     this.entityVerboseName = 'Users';
     this.db = new Database(this.entityVerboseName);

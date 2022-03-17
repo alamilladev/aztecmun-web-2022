@@ -218,7 +218,7 @@
 </template>
 
 <script>
-import { User } from '@@/src/app/modules/user';
+import User from '@@/src/app/modules/user';
 
 export default {
   name: 'SignupPage',
