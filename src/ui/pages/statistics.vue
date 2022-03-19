@@ -5,41 +5,46 @@
 
       <div class="statistics-chart-container">
         <ChartsBarChart
-          title="Delegados registrados por comités"
-          :labels="['Numero de registros']"
-          :datasets="comitteesData"
+          v-if="dataLoaded"
+          title="Cantidad de registros por comités"
+          :labels="['Personas registradas']"
+          :chart-datasets="committeeRecords"
         />
+        <h3 v-else>Cargando datos...</h3>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import User from '@@/src/app/modules/user';
+
 export default {
   name: 'StatisticsPage',
   layout: 'HomeLayout',
   data() {
     return {
-      comitteesData: [
+      dataLoaded: false,
+      committeeRecords: [
         {
           label: 'CIB',
-          data: [],
           backgroundColor: '#128d56',
+          data: [],
         },
         {
           label: 'CIDH',
-          data: [],
           backgroundColor: '#e8b85b',
+          data: [],
         },
         {
           label: 'UNICEF',
-          data: [],
           backgroundColor: '#4988db',
+          data: [],
         },
         {
           label: 'UNSC',
-          data: [],
           backgroundColor: '#c0293a',
+          data: [],
         },
       ],
     };
@@ -47,10 +52,16 @@ export default {
   head: {
     title: 'AztecMUN 2022 | Estadísticas',
   },
-  beforeMount() {
-    for (let i = 0; i < this.comitteesData.length; i++) {
-      this.comitteesData[i].data.push(30);
-    }
+  created() {
+    const user = new User();
+    user
+      .getCommitteesNumberOfRecords(['CIB', 'CIDH', 'UNICEF', 'UNSC'])
+      .then((numbersOfRecords) => {
+        for (let i = 0; i < numbersOfRecords.length; i++) {
+          this.committeeRecords[i].data.push(numbersOfRecords[i]);
+        }
+        this.dataLoaded = true;
+      });
   },
 };
 </script>

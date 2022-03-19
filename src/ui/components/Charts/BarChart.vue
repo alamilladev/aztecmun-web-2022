@@ -1,36 +1,11 @@
-<template>
-  <canvas id="bar-chart" width="100%" :class="className"></canvas>
-</template>
-
 <script>
-import {
-  Chart,
-  Title,
-  Legend,
-  Tooltip,
-  BarElement,
-  BarController,
-  LinearScale,
-  CategoryScale,
-} from 'chart.js';
-
-Chart.register(
-  Title,
-  Legend,
-  Tooltip,
-  BarElement,
-  BarController,
-  LinearScale,
-  CategoryScale
-);
+import Chart from 'chart.js';
+import { Bar } from 'vue-chartjs';
 
 export default {
   name: 'BarChart',
+  extends: Bar,
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
     title: {
       type: String,
       required: true,
@@ -39,48 +14,47 @@ export default {
       type: Array,
       required: true,
     },
-    datasets: {
+    chartDatasets: {
       type: Array,
       required: true,
     },
   },
   data() {
     return {
-      chartData: {
-        type: 'bar',
-        data: {
-          labels: this.labels,
-          datasets: this.datasets,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          fontSize: 25,
+          text: this.title,
         },
-        options: {
-          plugins: {
-            title: {
-              display: true,
-              font: {
-                size: 25,
+        legend: {
+          position: 'bottom',
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
               },
-              padding: {
-                bottom: 30,
-              },
-              text: this.title,
             },
-            legend: {
-              position: 'bottom',
-            },
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
+          ],
         },
       },
     };
   },
   mounted() {
-    const ctx = document.getElementById('bar-chart').getContext('2d');
-    new Chart(ctx, this.chartData);
-    Chart.defaults.font.size = 16;
+    Chart.defaults.global.defaultFontFamily = 'Open Sans';
+    Chart.defaults.global.defaultFontSize = 16;
+
+    this.renderChart(
+      {
+        labels: this.labels,
+        datasets: this.chartDatasets,
+      },
+      this.options
+    );
   },
 };
 </script>

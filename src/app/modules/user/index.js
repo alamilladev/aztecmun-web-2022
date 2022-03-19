@@ -25,6 +25,24 @@ export default class User {
       throw new Error(error);
     }
   }
+  async getCommitteesNumberOfRecords(committeesArray) {
+    try {
+      let numberOfRecordsArray = [];
+
+      for (let i = 0; i < committeesArray.length; i++) {
+        const record = await this.db.queryData(
+          'committee',
+          '==',
+          committeesArray[i]
+        );
+        numberOfRecordsArray.push(record.length);
+      }
+
+      return numberOfRecordsArray;
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
   listenLatestRegisteredUsers(callback) {
     this.db.listenLatestData(callback);
   }

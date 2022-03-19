@@ -57,4 +57,14 @@ export class Database {
       callback(latestData);
     });
   }
+  listendataByQuery(paramsObj, callback) {
+    const q = query(
+      this.collection,
+      where(paramsObj.field, paramsObj.operator, paramsObj.value)
+    );
+    const unsuscribe = onSnapshot(q, ({ docs }) => {
+      const data = docs.map(this.formatData);
+      callback(data);
+    });
+  }
 }

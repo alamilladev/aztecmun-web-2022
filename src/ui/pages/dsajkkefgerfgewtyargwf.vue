@@ -4,7 +4,16 @@
       <h1 class="primary page-title">
         Datos de registro de delegados para comités
       </h1>
-
+      <div class="control-buttons-wrapper">
+        <ButtonsLinkBtn
+          class-name="nav-btn"
+          type="fill"
+          color="secondary"
+          size="medium"
+          link-url="/statistics"
+          label="Ver estadísticas"
+        />
+      </div>
       <div class="registers-table-container">
         <table>
           <thead>
@@ -19,14 +28,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(user, index) in registers" :key="index">
-              <th>{{ user.name }}</th>
-              <th>{{ user.email }}</th>
-              <th>{{ user.phone }}</th>
-              <th>{{ user.age }}</th>
-              <th>{{ user.state }}</th>
-              <th>{{ user.school }}</th>
-              <th>{{ user.committee }}</th>
+            <template v-if="dataLoaded">
+              <tr v-for="(user, index) in registers" :key="index">
+                <th>{{ user.name }}</th>
+                <th>{{ user.email }}</th>
+                <th>{{ user.phone }}</th>
+                <th>{{ user.age }}</th>
+                <th>{{ user.state }}</th>
+                <th>{{ user.school }}</th>
+                <th>{{ user.committee }}</th>
+              </tr>
+            </template>
+            <tr v-else>
+              <th>Cargando datos...</th>
             </tr>
           </tbody>
         </table>
@@ -43,6 +57,7 @@ export default {
   layout: 'HomeLayout',
   data() {
     return {
+      dataLoaded: false,
       registers: [],
     };
   },
@@ -53,6 +68,7 @@ export default {
     const user = new User();
     user.listenLatestRegisteredUsers((registeredUsers) => {
       this.registers = registeredUsers;
+      this.dataLoaded = true;
     });
   },
 };
@@ -60,8 +76,10 @@ export default {
 
 <style lang="scss" scoped>
 .registers {
+  .control-buttons-wrapper {
+    margin: 50px 0;
+  }
   .registers-table-container {
-    margin-top: 50px;
     overflow-x: auto;
     table {
       width: 100%;
