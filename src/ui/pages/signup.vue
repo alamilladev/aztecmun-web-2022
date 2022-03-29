@@ -182,6 +182,8 @@
             <option disabled selected>Selecciona una opción</option>
             <option value="CIDH">CIDH</option>
             <option value="CIB">CIB</option>
+            <option value="OMS">OMS</option>
+            <option value="SENADO">SENADO</option>
             <option value="UNICEF">UNICEF</option>
             <option value="UNSC">UNSC</option>
           </select>

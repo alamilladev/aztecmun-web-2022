@@ -1,8 +1,8 @@
 <template>
   <div :class="['presentation-container', className]">
-    <h3 class="presentation-title">{{ title }}</h3>
+    <h3 class="'presentation-title'">{{ title }}</h3>
     <img
-      class="presentation-img"
+      :class="['presentation-img', committee]"
       :src="imageUrl"
       :alt="imageAlt"
       height="170"
@@ -22,30 +22,13 @@
 export default {
   name: 'PresentationCard',
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
-    imageAlt: {
-      type: String,
-      required: true,
-    },
-    buttonLink: {
-      type: String,
-      required: true,
-    },
-    buttonLabel: {
-      type: String,
-      required: true,
-    },
+    className: { type: String, default: '' },
+    title: { type: String, required: true },
+    committee: { type: String, default: '' },
+    imageUrl: { type: String, required: true },
+    imageAlt: { type: String, required: true },
+    buttonLink: { type: String, required: true },
+    buttonLabel: { type: String, required: true },
   },
 };
 </script>
@@ -60,6 +43,9 @@ export default {
 
   .presentation-img {
     margin: 19px 0;
+    &.senado {
+      margin: 32px 0;
+    }
   }
 }
 </style>

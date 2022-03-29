@@ -37,46 +37,16 @@
 export default {
   name: 'DescriptionCard',
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
-    divisionBar: {
-      type: Boolean,
-      default: true,
-    },
-    color: {
-      type: String,
-      required: true,
-    },
-    breadcrumb: {
-      type: String,
-      default: null,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    button: {
-      type: Boolean,
-      default: true,
-    },
-    buttonUrl: {
-      type: String,
-      default: '',
-    },
-    buttonLabel: {
-      type: String,
-      default: '',
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
-    imageAlt: {
-      type: String,
-      required: true,
-    },
+    className: { type: String, default: '' },
+    divisionBar: { type: Boolean, default: true },
+    color: { type: String, required: true },
+    breadcrumb: { type: String, default: null },
+    title: { type: String, required: true },
+    button: { type: Boolean, default: true },
+    buttonUrl: { type: String, default: '' },
+    buttonLabel: { type: String, default: '' },
+    imageUrl: { type: String, required: true },
+    imageAlt: { type: String, required: true },
   },
 };
 </script>
@@ -107,6 +77,7 @@ export default {
         margin: 10px 0 20px;
       }
       p {
+        text-align: justify;
         &:not(:last-child) {
           margin-bottom: 15px;
         }

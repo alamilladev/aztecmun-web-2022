@@ -148,6 +148,21 @@
           button-label="Ver más"
         />
         <CardsPresentationCard
+          title="Organización Mundial de la Salud"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1648510396/images/committees/OMS/logo_OMS_ml4ve3.svg"
+          image-alt="Logo de la Organización Mundial de la Salud"
+          button-link="/committees/oms"
+          button-label="Ver más"
+        />
+        <CardsPresentationCard
+          title="Senado de la República"
+          committee="senado"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1648510456/images/committees/SENADO/logo_senado_iuziai.svg"
+          image-alt="Logo del senado de la república"
+          button-link="/committees/senado"
+          button-label="Ver más"
+        />
+        <CardsPresentationCard
           title="United Nations Children's Fund"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
           image-alt="Logo del Fondo de las Naciones Unidas para la Infancia"

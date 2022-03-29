@@ -22,30 +22,12 @@
 export default {
   name: 'GeneralInfo',
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
-    imageAlt: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    buttonLink: {
-      type: String,
-      required: true,
-    },
-    buttonLabel: {
-      type: String,
-      required: true,
-    },
+    className: { type: String, default: '' },
+    imageUrl: { type: String, required: true },
+    imageAlt: { type: String, required: true },
+    description: { type: String, required: true },
+    buttonLink: { type: String, required: true },
+    buttonLabel: { type: String, required: true },
   },
 };
 </script>

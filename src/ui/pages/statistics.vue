@@ -37,6 +37,16 @@ export default {
           data: [],
         },
         {
+          label: 'OMS',
+          backgroundColor: '#4988db',
+          data: [],
+        },
+        {
+          label: 'SENADO',
+          backgroundColor: '#128d56',
+          data: [],
+        },
+        {
           label: 'UNICEF',
           backgroundColor: '#4988db',
           data: [],
@@ -55,10 +65,19 @@ export default {
   created() {
     const user = new User();
     user
-      .getCommitteesNumberOfRecords(['CIB', 'CIDH', 'UNICEF', 'UNSC'])
+      .getCommitteesNumberOfRecords([
+        'CIB',
+        'CIDH',
+        'OMS',
+        'SENADO',
+        'UNICEF',
+        'UNSC',
+      ])
       .then((numbersOfRecords) => {
         for (let i = 0; i < numbersOfRecords.length; i++) {
-          this.committeeRecords[i].data.push(numbersOfRecords[i]);
+          if (this.committeeRecords[i]) {
+            this.committeeRecords[i].data.push(numbersOfRecords[i]);
+          }
         }
         this.dataLoaded = true;
       });

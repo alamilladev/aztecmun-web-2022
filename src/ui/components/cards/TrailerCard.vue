@@ -45,34 +45,13 @@
 export default {
   name: 'TrailerCard',
   props: {
-    className: {
-      type: String,
-      default: '',
-    },
-    divisionBar: {
-      type: Boolean,
-      default: true,
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
-    imageAlt: {
-      type: String,
-      required: true,
-    },
-    buttonLabel: {
-      type: String,
-      required: true,
-    },
-    buttonUrl: {
-      type: String,
-      required: true,
-    },
-    videoUrl: {
-      type: String,
-      required: true,
-    },
+    className: { type: String, default: '' },
+    divisionBar: { type: Boolean, default: true },
+    imageUrl: { type: String, required: true },
+    imageAlt: { type: String, required: true },
+    buttonLabel: { type: String, required: true },
+    buttonUrl: { type: String, required: true },
+    videoUrl: { type: String, required: true },
   },
 };
 </script>

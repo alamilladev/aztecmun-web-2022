@@ -67,6 +67,60 @@
         <CardsDescriptionCard
           class-name="committee-card"
           color="primary"
+          breadcrumb="Comité en español"
+          title="OMS (Organización Mundial de la Salud)"
+          button-url="/committees/oms"
+          button-label="Ver más"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1648510396/images/committees/OMS/logo_OMS_ml4ve3.svg"
+          image-alt="Logo de la Organización Mundial de la Salud"
+        >
+          <template #description>
+            <p>
+              La Organización Mundial de la Salud (OMS) es la agencia
+              especializada de las Naciones Unidas para la salud, que consta de
+              194 estados miembros. La Organización Mundial de la Salud trabaja
+              en todo el mundo para promover el más alto nivel posible de salud
+              para todos, independientemente de su raza, religión, sexo,
+              ideología política o condición económica o social.
+            </p>
+            <p>
+              La misión de la Organización Mundial de la Salud es promover la
+              salud, mantener la seguridad mundial y atender a las poblaciones
+              vulnerables. El acceso a una atención médica adecuada y asequible
+              es un derecho humano, y la atención médica universal es un
+              principio fundamental que guía las operaciones de la Organización
+              Mundial de la Salud.
+            </p>
+          </template>
+        </CardsDescriptionCard>
+        <CardsDescriptionCard
+          class-name="committee-card"
+          color="secondary"
+          breadcrumb="Comité en español"
+          title="Senado (Senado de la República)"
+          button-url="/committees/senado"
+          button-label="Ver más"
+          image-url="https://res.cloudinary.com/aztecmun/image/upload/v1648510456/images/committees/SENADO/logo_senado_iuziai.svg"
+          image-alt="Logo del senado de la república"
+        >
+          <template #description>
+            <p>
+              EI Senado de la República, es la institución republicana que
+              cristaliza el pacto federal y que, a partir de la próxima
+              legislatura, se integrará por 128 senadores.
+            </p>
+            <p>
+              Destaca la participación que el Senado tiene en la aprobación de
+              los tratados o convenciones diplomáticas que suscriba el Poder
+              Ejecutivo, esto implica que el Senado debe examinar el contenido
+              del tratado o convención propuesto para su aprobación, con objeto
+              de determinar si no existe oposición alguna en la Constitución
+            </p>
+          </template>
+        </CardsDescriptionCard>
+        <CardsDescriptionCard
+          class-name="committee-card"
+          color="primary"
           breadcrumb="Comité en inglés"
           title="UNICEF (United Nations Children's Fund)"
           button-url="/committees/unicef"
