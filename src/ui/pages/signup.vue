@@ -5,7 +5,14 @@
         <ButtonsArrowBack class-name="signup-arrow" :on-click="goToPrevStep" />
         <LogoAztecmun class-name="signup-logo" />
       </div>
-      <form class="signup-form" @submit.prevent="goToNextStep">
+
+      <div v-if="signupDeadline" class="signup-form-container">
+        <div class="form-element active">
+          <h1 class="primary">La convocatoria ha terminado :(</h1>
+          <p>¡Esperamos verte en la siguiente edición!</p>
+        </div>
+      </div>
+      <form v-else class="signup-form-container" @submit.prevent="goToNextStep">
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(1)]"
         >
@@ -227,6 +234,7 @@ export default {
   layout: 'default',
   data() {
     return {
+      signupDeadline: true,
       slideAnimationClass: 'slide-in-right',
       signupError: false,
       validationErrorMesage: null,
