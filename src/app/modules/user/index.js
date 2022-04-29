@@ -13,6 +13,7 @@ export default class User {
       throw new Error(error);
     }
   }
+
   async getStatus(email) {
     try {
       const result = await this.db.queryData('email', '==', email);
@@ -25,9 +26,10 @@ export default class User {
       throw new Error(error);
     }
   }
+
   async getCommitteesNumberOfRecords(committeesArray) {
     try {
-      let numberOfRecordsArray = [];
+      const numberOfRecordsArray = [];
 
       for (let i = 0; i < committeesArray.length; i++) {
         const record = await this.db.queryData(
@@ -43,6 +45,7 @@ export default class User {
       throw new Error(error);
     }
   }
+
   listenLatestRegisteredUsers(callback) {
     this.db.listenLatestData(callback);
   }

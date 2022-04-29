@@ -24,6 +24,7 @@
               <th>Edad</th>
               <th>Estado</th>
               <th>Escuela</th>
+              <th>Nivel educativo</th>
               <th>Comité</th>
             </tr>
           </thead>
@@ -36,6 +37,7 @@
                 <th>{{ user.age }}</th>
                 <th>{{ user.state }}</th>
                 <th>{{ user.school }}</th>
+                <th>{{ user.education }}</th>
                 <th>{{ user.committee }}</th>
               </tr>
             </template>

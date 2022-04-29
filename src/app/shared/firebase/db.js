@@ -17,8 +17,6 @@ export class Database {
 
   formatData(doc) {
     const data = doc.data();
-    const id = doc.id;
-    const { createdAt } = data;
 
     return {
       id: data.id,
@@ -28,6 +26,7 @@ export class Database {
       age: data.age,
       state: data.state,
       school: data.school,
+      education: data.education,
       committee: data.committee,
     };
   }
@@ -41,6 +40,7 @@ export class Database {
       throw new Error(error);
     }
   }
+
   async queryData(field, operator, value) {
     try {
       const q = query(this.collection, where(field, operator, value));
@@ -50,19 +50,21 @@ export class Database {
       throw new Error(error);
     }
   }
+
   listenLatestData(callback) {
     const q = query(this.collection, orderBy('createdAt', 'desc'));
-    const unsuscribe = onSnapshot(q, ({ docs }) => {
+    onSnapshot(q, ({ docs }) => {
       const latestData = docs.map(this.formatData);
       callback(latestData);
     });
   }
+
   listendataByQuery(paramsObj, callback) {
     const q = query(
       this.collection,
       where(paramsObj.field, paramsObj.operator, paramsObj.value)
     );
-    const unsuscribe = onSnapshot(q, ({ docs }) => {
+    onSnapshot(q, ({ docs }) => {
       const data = docs.map(this.formatData);
       callback(data);
     });
