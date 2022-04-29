@@ -6,12 +6,20 @@
       </h1>
       <div class="control-buttons-wrapper">
         <ButtonsLinkBtn
-          class-name="nav-btn"
+          class-name="btn"
           type="fill"
           color="secondary"
           size="medium"
           link-url="/statistics"
           label="Ver estadísticas"
+        />
+        <ButtonsLinkBtn
+          class-name="btn"
+          type="fill"
+          color="tertiary"
+          size="medium"
+          link-url="/downloads/registers"
+          label="Dercargar datos"
         />
       </div>
       <div class="registers-table-container">
@@ -80,6 +88,10 @@ export default {
 .registers {
   .control-buttons-wrapper {
     margin: 50px 0;
+
+    .btn:nth-child(2n) {
+      margin-left: 20px;
+    }
   }
   .registers-table-container {
     overflow-x: auto;
