@@ -14,6 +14,15 @@
       </div>
       <form v-else class="signup-form-container" @submit.prevent="goToNextStep">
         <div
+          :class="['form-element', slideAnimationClass, setStepStatusClass(0)]"
+        >
+          <h1 class="success-title">
+            Registro para <br />
+            Pajes y Edecanes
+          </h1>
+          <p>Por favor completa el siguiente formulario</p>
+        </div>
+        <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(1)]"
         >
           <label for="age">Nombre completo:</label>
@@ -250,7 +259,7 @@ export default {
       signupError: false,
       validationErrorMesage: null,
       stepId: {
-        current: 1,
+        current: 0,
         minLimit: 0,
         maxLimit: 11,
       },
@@ -288,10 +297,10 @@ export default {
       for (let i = 1; i <= formLength; i++) {
         if (i === stepId) {
           const id = Object.keys(this.volunteerData)[stepId - 1];
-
           if (
             this.volunteerData[id] &&
             this.volunteerData[id] !== '' &&
+            this.volunteerData[id] !== ' ' &&
             this.volunteerData[id] !== 'Selecciona una opción'
           ) {
             if (id === 'email') {
@@ -330,7 +339,7 @@ export default {
       this.stepId.current -= 1;
 
       if (
-        this.stepId.current === this.stepId.minLimit ||
+        this.stepId.current === this.stepId.minLimit - 1 ||
         this.stepId.current === this.stepId.maxLimit - 1
       ) {
         this.$router.push('/');
