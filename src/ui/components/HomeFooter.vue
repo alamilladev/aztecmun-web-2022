@@ -22,7 +22,7 @@
         <div class="nav-column">
           <nuxt-link class="nav-link black" to="/">Soporte</nuxt-link>
           <nuxt-link class="nav-link black" to="/">Blog</nuxt-link>
-          <nuxt-link class="nav-link black" to="/statistics">
+          <nuxt-link class="nav-link black" to="/statistics/delegates">
             Estadísticas
           </nuxt-link>
         </div>

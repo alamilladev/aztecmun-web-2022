@@ -20,7 +20,7 @@
 import User from '@@/src/app/modules/user';
 
 export default {
-  name: 'StatisticsPage',
+  name: 'StatisticsDelegatesPage',
   layout: 'HomeLayout',
   data() {
     return {
@@ -60,7 +60,7 @@ export default {
     };
   },
   head: {
-    title: 'AztecMUN 2022 | Estadísticas',
+    title: 'AztecMUN 2022 | Estadísticas de delegados',
   },
   created() {
     const user = new User();

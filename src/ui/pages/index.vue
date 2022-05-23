@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <!-- <section class="location">
+    <section class="location">
       <div class="container flex">
         <div class="location-info">
           <h2>Fecha y dirección de la sede</h2>
@@ -83,7 +83,7 @@
                 />
                 <p>
                   <strong>Días del modelo</strong><br />
-                  Junio de 2022
+                  30 de junio y 1 de julio
                 </p>
               </div>
               <div class="location-detail-item">
@@ -93,8 +93,8 @@
                   loading="lazy"
                 />
                 <p>
-                  <strong>Monto a pagar</strong><br />
-                  MXN $ ----
+                  <strong>Precio para delegados</strong><br />
+                  $350 MXN
                 </p>
               </div>
             </div>
@@ -126,7 +126,7 @@
           loading="lazy"
         ></iframe>
       </div>
-    </section> -->
+    </section>
 
     <section class="committees">
       <h2 class="primary section-subtitle text-center">

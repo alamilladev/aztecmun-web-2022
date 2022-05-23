@@ -1,25 +1,15 @@
 <template>
   <section class="registers">
     <div class="container">
-      <h1 class="primary page-title">
-        Datos de registro de delegados para comités
-      </h1>
+      <h1 class="primary page-title">Datos de registro de voluntarios</h1>
       <div class="control-buttons-wrapper">
         <ButtonsLinkBtn
           class-name="btn"
           type="fill"
           color="secondary"
           size="medium"
-          link-url="/statistics"
+          link-url="/statistics/volunteers"
           label="Ver estadísticas"
-        />
-        <ButtonsLinkBtn
-          class-name="btn"
-          type="fill"
-          color="tertiary"
-          size="medium"
-          link-url="/downloads/registers"
-          label="Dercargar datos"
         />
       </div>
       <div class="registers-table-container">
@@ -27,26 +17,28 @@
           <thead>
             <tr>
               <th>Nombre</th>
-              <th>Email</th>
-              <th>Telefono</th>
               <th>Edad</th>
               <th>Estado</th>
-              <th>Escuela</th>
-              <th>Nivel educativo</th>
-              <th>Comité</th>
+              <th>Institución</th>
+              <th>Grupo</th>
+              <th>Turno</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Puesto</th>
             </tr>
           </thead>
           <tbody>
             <template v-if="dataLoaded">
-              <tr v-for="(user, index) in registers" :key="index">
-                <th>{{ user.name }}</th>
-                <th>{{ user.email }}</th>
-                <th>{{ user.phone }}</th>
-                <th>{{ user.age }}</th>
-                <th>{{ user.state }}</th>
-                <th>{{ user.school }}</th>
-                <th>{{ user.education }}</th>
-                <th>{{ user.committee }}</th>
+              <tr v-for="(volunteer, index) in registers" :key="index">
+                <th>{{ volunteer.name }}</th>
+                <th>{{ volunteer.age }}</th>
+                <th>{{ volunteer.state }}</th>
+                <th>{{ volunteer.school }}</th>
+                <th>{{ volunteer.group }}</th>
+                <th>{{ volunteer.shift }}</th>
+                <th>{{ volunteer.email }}</th>
+                <th>{{ volunteer.phone }}</th>
+                <th>{{ volunteer.role }}</th>
               </tr>
             </template>
             <tr v-else>
@@ -60,10 +52,10 @@
 </template>
 
 <script>
-import User from '@@/src/app/modules/user';
+import Volunteer from '@@/src/app/modules/volunteer';
 
 export default {
-  name: 'RegistersPage',
+  name: 'RecordsVolunteersPage',
   layout: 'HomeLayout',
   data() {
     return {
@@ -72,12 +64,12 @@ export default {
     };
   },
   head: {
-    title: 'AztecMUN 2022 | Registros',
+    title: 'AztecMUN 2022 | Registros de voluntarios',
   },
   mounted() {
-    const user = new User();
-    user.listenLatestRegisteredUsers((registeredUsers) => {
-      this.registers = registeredUsers;
+    const volunteer = new Volunteer();
+    volunteer.listenLatestRegisteredVolunteers((registeredVolunteers) => {
+      this.registers = registeredVolunteers;
       this.dataLoaded = true;
     });
   },

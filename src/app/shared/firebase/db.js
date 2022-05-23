@@ -15,20 +15,10 @@ export class Database {
     this.collection = collection(db, collectionName);
   }
 
-  formatData(doc) {
+  serializeData(doc) {
     const data = doc.data();
 
-    return {
-      id: data.id,
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
-      age: data.age,
-      state: data.state,
-      school: data.school,
-      education: data.education,
-      committee: data.committee,
-    };
+    return { ...data };
   }
 
   async saveData(object) {
@@ -54,7 +44,7 @@ export class Database {
   listenLatestData(callback) {
     const q = query(this.collection, orderBy('createdAt', 'desc'));
     onSnapshot(q, ({ docs }) => {
-      const latestData = docs.map(this.formatData);
+      const latestData = docs.map(this.serializeData);
       callback(latestData);
     });
   }
@@ -65,7 +55,7 @@ export class Database {
       where(paramsObj.field, paramsObj.operator, paramsObj.value)
     );
     onSnapshot(q, ({ docs }) => {
-      const data = docs.map(this.formatData);
+      const data = docs.map(this.serializeData);
       callback(data);
     });
   }

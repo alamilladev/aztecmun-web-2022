@@ -6,7 +6,7 @@
         <LogoAztecmun class-name="signup-logo" />
       </div>
 
-      <div v-if="signupDeadline" class="signup-form-container">
+      <div v-if="signupDisable" class="signup-form-container">
         <div class="form-element active">
           <h1 class="primary">La convocatoria ha terminado :(</h1>
           <p>¡Esperamos verte en la siguiente edición!</p>
@@ -19,7 +19,7 @@
           <label for="age">Nombre completo:</label>
           <input
             id="name"
-            v-model="userData.name"
+            v-model="volunteerData.name"
             name="name"
             type="text"
             placeholder="Nombre completo"
@@ -35,7 +35,7 @@
           <label for="age">Edad:</label>
           <input
             id="age"
-            v-model="userData.age"
+            v-model="volunteerData.age"
             name="age"
             type="number"
             placeholder="18"
@@ -51,7 +51,7 @@
           <label for="state">Estado:</label>
           <select
             id="state"
-            v-model="userData.state"
+            v-model="volunteerData.state"
             required
             name="state"
             class="form-input"
@@ -98,7 +98,7 @@
           <label for="school">Escuela de procedencia:</label>
           <input
             id="school"
-            v-model="userData.school"
+            v-model="volunteerData.school"
             name="school"
             type="text"
             placeholder="Plantel Azteca CDMX"
@@ -111,29 +111,43 @@
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(5)]"
         >
-          <label for="education">Nivel de estudios:</label>
-          <select
-            id="education"
-            v-model="userData.education"
+          <label for="group">Grupo:</label>
+          <input
+            id="group"
+            v-model="volunteerData.group"
+            name="group"
+            type="text"
+            placeholder="411"
             required
-            name="education"
+            autofocus
             class="form-input"
             @input="setValidationErrorMessage(null)"
-          >
-            <option disabled selected>Selecciona una opción</option>
-            <option value="secundaria">secundaria</option>
-            <option value="preparatoria">preparatoria</option>
-            <option value="universidad">universidad</option>
-            <option value="otro">otro</option>
-          </select>
+          />
         </div>
         <div
           :class="['form-element', slideAnimationClass, setStepStatusClass(6)]"
         >
+          <label for="shift">Turno:</label>
+          <select
+            id="shift"
+            v-model="volunteerData.shift"
+            required
+            name="shift"
+            class="form-input"
+            @input="setValidationErrorMessage(null)"
+          >
+            <option disabled selected>Selecciona una opción</option>
+            <option value="Matutino">Matutino</option>
+            <option value="Vespertino">Vespertino</option>
+          </select>
+        </div>
+        <div
+          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
+        >
           <label for="email">Correo electronico:</label>
           <input
             id="email"
-            v-model="userData.email"
+            v-model="volunteerData.email"
             name="email"
             type="email"
             placeholder="name@example.com"
@@ -144,12 +158,12 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(7)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
         >
           <label for="password">Contraseña:</label>
           <input
             id="password"
-            v-model="userData.password"
+            v-model="volunteerData.password"
             name="password"
             type="password"
             required
@@ -159,12 +173,12 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(8)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(9)]"
         >
           <label for="phone">Teléfono:</label>
           <input
             id="phone"
-            v-model="userData.phone"
+            v-model="volunteerData.phone"
             name="phone"
             type="tel"
             placeholder="5564927362"
@@ -175,28 +189,24 @@
           />
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(9)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(10)]"
         >
-          <label for="committee">Comité:</label>
+          <label for="role">Rol a desempeñar:</label>
           <select
-            id="committee"
-            v-model="userData.committee"
+            id="role"
+            v-model="volunteerData.role"
             required
-            name="committee"
+            name="role"
             class="form-input"
             @input="setValidationErrorMessage(null)"
           >
             <option disabled selected>Selecciona una opción</option>
-            <option value="CIDH">CIDH</option>
-            <option value="CIB">CIB</option>
-            <option value="OMS">OMS</option>
-            <option value="SENADO">SENADO</option>
-            <option value="UNICEF">UNICEF</option>
-            <option value="UNSC">UNSC</option>
+            <option value="Paje">Paje</option>
+            <option value="Auxiliar">Auxiliar (edecan)</option>
           </select>
         </div>
         <div
-          :class="['form-element', slideAnimationClass, setStepStatusClass(10)]"
+          :class="['form-element', slideAnimationClass, setStepStatusClass(11)]"
         >
           <template v-if="signupError === false">
             <h1 class="success-title">¡Registro completado!</h1>
@@ -227,32 +237,34 @@
 </template>
 
 <script>
-import User from '@@/src/app/modules/user';
+import Volunteer from '@@/src/app/modules/volunteer';
 
 export default {
   name: 'SignupPage',
   layout: 'default',
   data() {
     return {
-      signupDeadline: true,
+      fomType: 'volunteers',
+      signupDisable: false,
       slideAnimationClass: 'slide-in-right',
       signupError: false,
       validationErrorMesage: null,
       stepId: {
         current: 1,
         minLimit: 0,
-        maxLimit: 10,
+        maxLimit: 11,
       },
-      userData: {
+      volunteerData: {
         name: '',
         age: '',
         state: 'Selecciona una opción',
         school: '',
-        education: 'Selecciona una opción',
+        group: '',
+        shift: 'Selecciona una opción',
         email: '',
         password: '',
         phone: '',
-        committee: 'Selecciona una opción',
+        role: 'Selecciona una opción',
       },
     };
   },
@@ -271,20 +283,20 @@ export default {
       this.validationErrorMesage = message;
     },
     async validateInputData(stepId) {
-      const formLength = Object.keys(this.userData).length;
+      const formLength = Object.keys(this.volunteerData).length;
 
       for (let i = 1; i <= formLength; i++) {
         if (i === stepId) {
-          const id = Object.keys(this.userData)[stepId - 1];
+          const id = Object.keys(this.volunteerData)[stepId - 1];
 
           if (
-            this.userData[id] &&
-            this.userData[id] !== '' &&
-            this.userData[id] !== 'Selecciona una opción'
+            this.volunteerData[id] &&
+            this.volunteerData[id] !== '' &&
+            this.volunteerData[id] !== 'Selecciona una opción'
           ) {
             if (id === 'email') {
-              const user = new User();
-              return await user.getStatus(this.userData.email);
+              const volunteer = new Volunteer();
+              return await volunteer.getStatus(this.volunteerData.email);
             } else {
               this.setValidationErrorMessage(null);
             }
@@ -305,7 +317,7 @@ export default {
           this.stepId.current += 1;
 
           if (this.stepId.current === this.stepId.maxLimit) {
-            this.submitForm();
+            this.submitForm(this.fomType);
           } else if (this.stepId.current > this.stepId.maxLimit) {
             this.$router.push('/');
           }
@@ -325,9 +337,9 @@ export default {
       }
     },
     submitForm() {
-      const user = new User();
-      user
-        .signup(this.userData)
+      const volunteer = new Volunteer();
+      volunteer
+        .signup(this.volunteerData)
         .then(() => {
           this.signupError = false;
         })
