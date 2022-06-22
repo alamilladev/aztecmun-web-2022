@@ -254,7 +254,7 @@ export default {
   data() {
     return {
       fomType: 'volunteers',
-      signupDisable: false,
+      signupDisable: true,
       slideAnimationClass: 'slide-in-right',
       signupError: false,
       validationErrorMesage: null,

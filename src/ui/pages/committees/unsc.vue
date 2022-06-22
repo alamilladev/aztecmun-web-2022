@@ -8,7 +8,7 @@
         breadcrumb="Comité en inglés"
         title="UNSC (The United Nations Security Council))"
         button-url="/signup"
-        button-label="Regístrate"
+        button-label="Sign up"
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255626/images/committees/UNSC/IMG_3522_1_dqczil.jpg"
         image-alt="Logo of the United Nations Security Council"
       >
@@ -31,15 +31,21 @@
       </CardsDescriptionCard>
       <CardsTrailerCard
         class-name="trailer-container"
-        button-label="Ver documentos"
+        button-label="See documents"
         button-url=""
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
         image-alt="Logo of the United Nations Security Council"
         video-url="https://www.youtube.com/embed/fluDdkqENVg"
       />
+      <CommitteesTopicCard
+        theme="quaternary"
+        title="CRISIS"
+        description="Afghanistan, a new nation for terrorists?"
+      />
       <div class="members-container">
+        <DivisionBar class-name="division-bar" />
         <h2 class="quaternary section-subtitle text-center">
-          Integrantes de la mesa
+          Members of the table
         </h2>
         <ImagesGalleryWrapper>
           <template #images>

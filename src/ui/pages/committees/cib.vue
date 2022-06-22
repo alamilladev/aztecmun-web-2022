@@ -37,7 +37,21 @@
         image-alt="Logo del la UNESCO, organización a la que pertenece el Comité Internacional de Bioética"
         video-url="https://www.youtube.com/embed/ZVF4KEHk8A0"
       />
+      <div class="topics-container">
+        <CommitteesTopicCard
+          theme="secondary"
+          title="TÓPICO A"
+          description="Experimentación animal en productos de uso cotidiano"
+        />
+
+        <CommitteesTopicCard
+          theme="secondary"
+          title="TÓPICO B"
+          description="Energía nuclear y atómica en México y el mundo"
+        />
+      </div>
       <div class="members-container">
+        <DivisionBar class-name="division-bar" />
         <h2 class="secondary section-subtitle text-center">
           Integrantes de la mesa
         </h2>

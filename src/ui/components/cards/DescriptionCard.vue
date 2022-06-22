@@ -1,13 +1,6 @@
 <template>
   <article :class="['description-card-container', className]">
-    <img
-      v-if="divisionBar"
-      class="division-bar"
-      src="https://res.cloudinary.com/aztecmun/image/upload/v1647298982/images/generic_illustrations/division_bar_jetwnb.svg"
-      alt="Ilustración de manchas de colores para usar como barra de separación"
-      width="100%"
-      loading="lazy"
-    />
+    <DivisionBar v-if="divisionBar" class-name="division-bar" />
     <div class="card-content-container flex">
       <div class="card-content-info">
         <span v-if="breadcrumb" class="breadcrumb gray">{{ breadcrumb }}</span>

@@ -15,8 +15,10 @@
           </nuxt-link>
         </div>
         <div class="nav-column">
-          <nuxt-link class="nav-link black" to="/">Recursos</nuxt-link>
-          <nuxt-link class="nav-link black" to="/">Agenda</nuxt-link>
+          <nuxt-link class="nav-link black" to="/documents"
+            >Documentos</nuxt-link
+          >
+          <nuxt-link class="nav-link black" to="/agenda">Agenda</nuxt-link>
           <nuxt-link class="nav-link black" to="/">Pago</nuxt-link>
         </div>
         <div class="nav-column">
@@ -47,7 +49,6 @@
         </div>
         <p>aztecmun.plantelazteca@gmail.com</p>
       </div>
-      <div class="constrols">controls block</div>
     </div>
     <p class="copyright">&copy; AztecMUN 2022. Made with love.</p>
   </footer>

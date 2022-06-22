@@ -124,7 +124,7 @@
           breadcrumb="Comité en inglés"
           title="UNICEF (United Nations Children's Fund)"
           button-url="/committees/unicef"
-          button-label="Ver más"
+          button-label="See more"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
           image-alt="Logo of United Nations Children's Fund"
         >
@@ -154,7 +154,7 @@
           breadcrumb="Comité en inglés"
           title="UNSC (The United Nations Security Council)"
           button-url="/committees/unsc"
-          button-label="Ver más"
+          button-label="See more"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
           image-alt="Logo of the United Nations Security Council"
         >

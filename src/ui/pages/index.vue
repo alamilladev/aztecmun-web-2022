@@ -114,7 +114,7 @@
             type="fill"
             color="secondary"
             size="medium"
-            link-url="/"
+            link-url="/agenda"
             label="Ver agenda"
           />
         </div>
@@ -167,14 +167,14 @@
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
           image-alt="Logo del Fondo de las Naciones Unidas para la Infancia"
           button-link="/committees/unicef"
-          button-label="Ver más"
+          button-label="See more"
         />
         <CardsPresentationCard
           title="United Nations Security Council"
           image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
           image-alt="Logo del consejo de seguridad de la ONU"
           button-link="/committees/unsc"
-          button-label="Ver más"
+          button-label="See more"
         />
       </div>
     </section>

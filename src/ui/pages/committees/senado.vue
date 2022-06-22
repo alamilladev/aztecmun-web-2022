@@ -27,6 +27,19 @@
           </p>
         </template>
       </CardsDescriptionCard>
+      <DivisionBar class-name="division-bar" />
+      <div class="topics-container">
+        <CommitteesTopicCard
+          theme="secondary"
+          title="TÓPICO A"
+          description="Proyecto de decreto por los derechos políticos y electorales de las y los indígenas"
+        />
+        <CommitteesTopicCard
+          theme="secondary"
+          title="TÓPICO B"
+          description="Proyecto de decreto para el desarrollo de justicia para los adolescentes"
+        />
+      </div>
     </div>
   </section>
 </template>

@@ -8,7 +8,7 @@
         breadcrumb="Comité en inglés"
         title="UNICEF (United Nations Children's Fund)"
         button-url="/signup"
-        button-label="Regístrate"
+        button-label="Sign up"
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255616/images/committees/UNICEF/IMG_3522_1_uulvii.jpg"
         image-alt="Logo of United Nations Children's Fund"
       >
@@ -33,15 +33,29 @@
       </CardsDescriptionCard>
       <CardsTrailerCard
         class-name="trailer-container"
-        button-label="Ver documentos"
+        button-label="See documents"
         button-url=""
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647256379/images/committees/UNICEF/logo_UNICEF_hcnex7.svg"
         image-alt="Logo of United Nations Children's Fund"
         video-url="https://www.youtube.com/embed/Lv0XQ7jp7HQ"
       />
+      <div class="topics-container">
+        <CommitteesTopicCard
+          theme="primary"
+          title="Topic A"
+          description="Rural Zones Education in México"
+        />
+
+        <CommitteesTopicCard
+          theme="primary"
+          title="Topic B"
+          description="Contaminated Water In Africa"
+        />
+      </div>
       <div class="members-container">
+        <DivisionBar class-name="division-bar" />
         <h2 class="primary section-subtitle text-center">
-          Integrantes de la mesa
+          Members of the table
         </h2>
         <ImagesGalleryWrapper>
           <template #images>

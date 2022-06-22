@@ -1,0 +1,15 @@
+.agenda-container {
+  @include for-size(m) {
+    padding: 0 20px;
+  }
+  text-align: center;
+
+  img {
+    max-width: 900px;
+    width: 100%;
+
+    &:nth-child(2n) {
+      margin-top: 60px;
+    }
+  }
+}

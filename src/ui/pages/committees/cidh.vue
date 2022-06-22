@@ -36,7 +36,15 @@
         image-alt="Logo de la Corte Interamericana de Derechos Humanos"
         video-url="https://www.youtube.com/embed/eS_briTzf_c"
       />
+      <div class="topics-container">
+        <CommitteesTopicCard
+          theme="tertiary"
+          title="CASO"
+          description="Caso pueblos indígenas Tagaeri y Taromenane Vs. Ecuador"
+        />
+      </div>
       <div class="members-container">
+        <DivisionBar class-name="division-bar" />
         <h2 class="tertiary section-subtitle text-center">
           Integrantes de la mesa
         </h2>

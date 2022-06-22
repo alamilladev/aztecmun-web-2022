@@ -31,6 +31,19 @@
           </p>
         </template>
       </CardsDescriptionCard>
+      <DivisionBar class-name="division-bar" />
+      <div class="topics-container">
+        <CommitteesTopicCard
+          theme="primary"
+          title="TÓPICO A"
+          description="Salud sexual y reproductiva en países subdesarrollados"
+        />
+        <CommitteesTopicCard
+          theme="primary"
+          title="TÓPICO B"
+          description="Creación de protocolos para la atención de la salud mental en países de Latinoamérica"
+        />
+      </div>
     </div>
   </section>
 </template>
