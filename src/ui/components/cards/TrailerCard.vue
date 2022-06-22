@@ -4,13 +4,6 @@
     <div class="content-wrapper">
       <div class="content-left">
         <img :src="imageUrl" :alt="imageAlt" width="100%" loading="lazy" />
-        <ButtonsLinkBtn
-          type="fill"
-          color="primary"
-          size="full"
-          :link-url="buttonUrl"
-          :label="buttonLabel"
-        />
       </div>
       <iframe
         width="560"
@@ -35,8 +28,6 @@ export default {
     divisionBar: { type: Boolean, default: true },
     imageUrl: { type: String, required: true },
     imageAlt: { type: String, required: true },
-    buttonLabel: { type: String, required: true },
-    buttonUrl: { type: String, required: true },
     videoUrl: { type: String, required: true },
   },
 };
@@ -62,10 +53,8 @@ export default {
     flex-direction: row-reverse;
 
     .content-left {
-      max-width: 300px;
-      img {
-        margin-bottom: 20px;
-      }
+      max-width: 250px;
+      width: 100%;
     }
   }
 }

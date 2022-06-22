@@ -31,17 +31,34 @@
       </CardsDescriptionCard>
       <CardsTrailerCard
         class-name="trailer-container"
-        button-label="See documents"
-        button-url=""
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255617/images/committees/UNSC/logo_UNSC_c9flyp.svg"
         image-alt="Logo of the United Nations Security Council"
         video-url="https://www.youtube.com/embed/fluDdkqENVg"
       />
-      <CommitteesTopicCard
-        theme="quaternary"
-        title="CRISIS"
-        description="Afghanistan, a new nation for terrorists?"
-      />
+      <div class="topics-and-documents">
+        <div class="topics-container">
+          <CommitteesTopicCard
+            theme="quaternary"
+            title="CRISIS"
+            description="Afghanistan, a new nation for terrorists?"
+          />
+        </div>
+        <div class="documents-container">
+          <h2 class="quaternary text-center">Documents</h2>
+          <Document
+            class-name="document"
+            theme="quaternary"
+            name="Handbook_UNSC.pdf"
+            url="https://drive.google.com/file/d/1g1CZflXHgG2Qak13dNzPbwjfKUqxLCGt/view?usp=sharing"
+          />
+          <Document
+            class-name="document"
+            theme="quaternary"
+            name="Protocol_UNSC.pdf"
+            url="https://drive.google.com/file/d/1mQP9FlG04d_-65-Vyh2qjmZR9RPyq6Sn/view?usp=sharing"
+          />
+        </div>
+      </div>
       <div class="members-container">
         <DivisionBar class-name="division-bar" />
         <h2 class="quaternary section-subtitle text-center">

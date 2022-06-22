@@ -7,9 +7,34 @@
   }
 
   .members-container,
-  .topics-container,
+  .topics-and-documents,
   .division-bar {
     margin: 60px auto;
     max-width: 965px;
+  }
+
+  .topics-and-documents {
+    @include for-size(m) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .topics-container,
+    .documents-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .documents-container {
+      margin-top: 60px;
+
+      @include for-size(m) {
+        margin-top: 0px;
+      }
+
+      .document {
+        margin-top: 20px;
+      }
+    }
   }
 }

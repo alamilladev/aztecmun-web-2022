@@ -94,7 +94,7 @@
                 />
                 <p>
                   <strong>Precio para delegados</strong><br />
-                  $350 MXN
+                  MXN $350
                 </p>
               </div>
             </div>

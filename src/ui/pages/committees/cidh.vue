@@ -30,18 +30,33 @@
       </CardsDescriptionCard>
       <CardsTrailerCard
         class-name="trailer-container"
-        button-label="Ver documentos"
-        button-url=""
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIDH/logo_CIDH_mpksev.svg"
         image-alt="Logo de la Corte Interamericana de Derechos Humanos"
         video-url="https://www.youtube.com/embed/eS_briTzf_c"
       />
-      <div class="topics-container">
-        <CommitteesTopicCard
-          theme="tertiary"
-          title="CASO"
-          description="Caso pueblos indígenas Tagaeri y Taromenane Vs. Ecuador"
-        />
+      <div class="topics-and-documents">
+        <div class="topics-container">
+          <CommitteesTopicCard
+            theme="tertiary"
+            title="CASO"
+            description="Caso pueblos indígenas Tagaeri y Taromenane Vs. Ecuador"
+          />
+        </div>
+        <div class="documents-container">
+          <h2 class="tertiary text-center">Documentos</h2>
+          <Document
+            class-name="document"
+            theme="tertiary"
+            name="Handbook_CIDH.pdf"
+            url="https://drive.google.com/file/d/14vM1TA-KCKgtD8ln7ddCXXPrKcycTkG8/view?usp=sharing"
+          />
+          <Document
+            class-name="document"
+            theme="tertiary"
+            name="Protocolo_CIDH.pdf"
+            url="https://drive.google.com/file/d/1aEfm3AzKtgmbvVCIiO1AnLnfIvQojkKN/view?usp=sharing"
+          />
+        </div>
       </div>
       <div class="members-container">
         <DivisionBar class-name="division-bar" />
@@ -51,6 +66,7 @@
         <ImagesGalleryWrapper>
           <template #images>
             <figure>
+              e
               <img
                 src="https://res.cloudinary.com/aztecmun/image/upload/v1647255608/images/committees/CIDH/IMG_3442_ucny8h.jpg"
                 alt="Integrante de CIDH"

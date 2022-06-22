@@ -31,24 +31,39 @@
       </CardsDescriptionCard>
       <CardsTrailerCard
         class-name="trailer-container"
-        button-label="Ver documentos"
-        button-url=""
         image-url="https://res.cloudinary.com/aztecmun/image/upload/v1647255609/images/committees/CIB/logo_CIB_wfntlj.svg"
         image-alt="Logo del la UNESCO, organización a la que pertenece el Comité Internacional de Bioética"
         video-url="https://www.youtube.com/embed/ZVF4KEHk8A0"
       />
-      <div class="topics-container">
-        <CommitteesTopicCard
-          theme="secondary"
-          title="TÓPICO A"
-          description="Experimentación animal en productos de uso cotidiano"
-        />
+      <div class="topics-and-documents">
+        <div class="topics-container">
+          <CommitteesTopicCard
+            theme="secondary"
+            title="TÓPICO A"
+            description="Experimentación animal en productos de uso cotidiano"
+          />
 
-        <CommitteesTopicCard
-          theme="secondary"
-          title="TÓPICO B"
-          description="Energía nuclear y atómica en México y el mundo"
-        />
+          <CommitteesTopicCard
+            theme="secondary"
+            title="TÓPICO B"
+            description="Energía nuclear y atómica en México y el mundo"
+          />
+        </div>
+        <div class="documents-container">
+          <h2 class="secondary text-center">Documentos</h2>
+          <Document
+            class-name="document"
+            theme="secondary"
+            name="Handbook_CIB.pdf"
+            url="https://drive.google.com/file/d/1kLvGEBb0UHkUSnSoerB-N--snEJg5WOq/view?usp=sharing"
+          />
+          <Document
+            class-name="document"
+            theme="secondary"
+            name="Protocolo_CIB.pdf"
+            url="https://drive.google.com/file/d/1c8yVt0iGucTJToBNwy4KzB4fc20RBQ2m/view?usp=sharing"
+          />
+        </div>
       </div>
       <div class="members-container">
         <DivisionBar class-name="division-bar" />

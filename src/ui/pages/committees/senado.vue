@@ -28,17 +28,34 @@
         </template>
       </CardsDescriptionCard>
       <DivisionBar class-name="division-bar" />
-      <div class="topics-container">
-        <CommitteesTopicCard
-          theme="secondary"
-          title="TÓPICO A"
-          description="Proyecto de decreto por los derechos políticos y electorales de las y los indígenas"
-        />
-        <CommitteesTopicCard
-          theme="secondary"
-          title="TÓPICO B"
-          description="Proyecto de decreto para el desarrollo de justicia para los adolescentes"
-        />
+      <div class="topics-and-documents">
+        <div class="topics-container">
+          <CommitteesTopicCard
+            theme="secondary"
+            title="TÓPICO A"
+            description="Proyecto de decreto por los derechos políticos y electorales de las y los indígenas"
+          />
+          <CommitteesTopicCard
+            theme="secondary"
+            title="TÓPICO B"
+            description="Proyecto de decreto para el desarrollo de justicia para los adolescentes"
+          />
+        </div>
+        <div class="documents-container">
+          <h2 class="secondary text-center">Documentos</h2>
+          <Document
+            class-name="document"
+            theme="secondary"
+            name="Handbook_SENADO.pdf"
+            url="https://drive.google.com/file/d/1d5MnVgsvu2hFHLUNmq86tsNqYOb90ZJg/view?usp=sharing"
+          />
+          <Document
+            class-name="document"
+            theme="secondary"
+            name="Protocolo_SENADO.pdf"
+            url="https://drive.google.com/file/d/1KSG4k7dtekGEwJd2BJkq3DK4eB3aqJQr/view?usp=sharing"
+          />
+        </div>
       </div>
     </div>
   </section>

@@ -1,5 +1,5 @@
 <template>
-  <a :href="linkUrl" target="_blank">
+  <a :href="linkUrl" target="_blank" rel="noopener noreferrer">
     <img :src="imageUrl" :alt="imageAlt" loading="lazy" />
   </a>
 </template>

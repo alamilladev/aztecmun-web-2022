@@ -32,17 +32,34 @@
         </template>
       </CardsDescriptionCard>
       <DivisionBar class-name="division-bar" />
-      <div class="topics-container">
-        <CommitteesTopicCard
-          theme="primary"
-          title="TÓPICO A"
-          description="Salud sexual y reproductiva en países subdesarrollados"
-        />
-        <CommitteesTopicCard
-          theme="primary"
-          title="TÓPICO B"
-          description="Creación de protocolos para la atención de la salud mental en países de Latinoamérica"
-        />
+      <div class="topics-and-documents">
+        <div class="topics-container">
+          <CommitteesTopicCard
+            theme="primary"
+            title="TÓPICO A"
+            description="Salud sexual y reproductiva en países subdesarrollados"
+          />
+          <CommitteesTopicCard
+            theme="primary"
+            title="TÓPICO B"
+            description="Creación de protocolos para la atención de la salud mental en países de Latinoamérica"
+          />
+        </div>
+        <div class="documents-container">
+          <h2 class="primary text-center">Documentos</h2>
+          <Document
+            class-name="document"
+            theme="primary"
+            name="Handbook_OMS.pdf"
+            url="https://drive.google.com/file/d/1eaFxnZucuiVs_oREAJQ6FFq1RU13qjgk/view?usp=sharing"
+          />
+          <Document
+            class-name="document"
+            theme="primary"
+            name="Protocolo_OMS.pdf"
+            url="https://drive.google.com/file/d/1OhlsxMPpG_lpknmgBF2EZE_208inhHeB/view?usp=sharing"
+          />
+        </div>
       </div>
     </div>
   </section>
