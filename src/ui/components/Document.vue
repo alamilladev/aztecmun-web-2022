@@ -1,12 +1,14 @@
 <template>
   <div :class="['document-container', theme, className]">
-    <img
-      class="download-icon"
-      src="https://res.cloudinary.com/aztecmun/image/upload/v1655911711/images/icons/download_qlde0b.svg"
-      alt="icono de descarga de archivo"
-    />
     <a :href="url" target="_blank" rel="noopener noreferrer" class="link">
-      {{ name }}
+      <img
+        class="download-icon"
+        src="https://res.cloudinary.com/aztecmun/image/upload/v1655911711/images/icons/download_qlde0b.svg"
+        alt="icono de descarga de archivo"
+      />
+      <span>
+        {{ name }}
+      </span>
     </a>
   </div>
 </template>
@@ -37,12 +39,9 @@ export default {
 
 <style lang="scss" scoped>
 .document-container {
-  display: flex;
   border: 1px solid;
   border-radius: 6px;
   padding: 5px 10px;
-  justify-content: center;
-  align-items: center;
 
   &.primary {
     border-color: $color-primary;
@@ -57,13 +56,16 @@ export default {
     border-color: $color-quaternary;
   }
 
-  .download-icon {
-    width: 15px;
-    margin-right: 8px;
-  }
-
   .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $color-black;
+
+    .download-icon {
+      width: 15px;
+      margin-right: 8px;
+    }
   }
 }
 </style>

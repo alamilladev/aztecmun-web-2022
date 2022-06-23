@@ -1,0 +1,22 @@
+.documents-section {
+  .documents-description {
+    text-align: center;
+    max-width: 768px;
+    margin: 40px auto 0;
+  }
+
+  .documents-container {
+    .main-documents,
+    .committees-documents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    .document {
+      max-width: 300px;
+      margin: 20px;
+    }
+  }
+}
